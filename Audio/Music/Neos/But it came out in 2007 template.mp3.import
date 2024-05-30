@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://poy2xder2wx8"
+path="res://.godot/imported/But it came out in 2007 template.mp3-2f60a3997cb77d0a9dc467d18f0b2cff.mp3str"
+
+[deps]
+
+source_file="res://Audio/Music/Neos/But it came out in 2007 template.mp3"
+dest_files=["res://.godot/imported/But it came out in 2007 template.mp3-2f60a3997cb77d0a9dc467d18f0b2cff.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

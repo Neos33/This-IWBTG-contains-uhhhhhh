@@ -1,0 +1,61 @@
+[gd_scene load_steps=3 format=3 uid="uid://q02oklosn40f"]
+
+[ext_resource type="Script" path="res://CircleSpinBackground.gd" id="1_4g215"]
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="2_peush"]
+
+[node name="CircleSpinBackground" type="Node2D"]
+script = ExtResource("1_4g215")
+radius_circle = Vector2(177.855, 128)
+speed_angle = 86
+number_of_circles = 10
+circle_size = Vector2(60, 60)
+
+[node name="Ellipse" type="Node2D" parent="."]
+position = Vector2(-133.86, 84.28)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse2" type="Node2D" parent="."]
+position = Vector2(-177.128, 11.5583)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse3" type="Node2D" parent="."]
+position = Vector2(-152.74, -65.5783)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse4" type="Node2D" parent="."]
+position = Vector2(-70.0098, -117.666)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse5" type="Node2D" parent="."]
+position = Vector2(39.4616, -124.81)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse6" type="Node2D" parent="."]
+position = Vector2(133.86, -84.28)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse7" type="Node2D" parent="."]
+position = Vector2(177.128, -11.5583)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse8" type="Node2D" parent="."]
+position = Vector2(152.74, 65.5783)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse9" type="Node2D" parent="."]
+position = Vector2(70.0098, 117.666)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)
+
+[node name="Ellipse10" type="Node2D" parent="."]
+position = Vector2(-39.4616, 124.81)
+script = ExtResource("2_peush")
+size = Vector2(60, 60)

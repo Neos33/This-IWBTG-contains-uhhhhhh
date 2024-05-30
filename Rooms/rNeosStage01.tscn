@@ -1,0 +1,76 @@
+[gd_scene load_steps=11 format=3 uid="uid://jb54q5yqegth"]
+
+[ext_resource type="Script" path="res://Rooms/rNeosStage01.gd" id="1_0xwcg"]
+[ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_i2umm"]
+[ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="2_33lai"]
+[ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="2_hd0ie"]
+[ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="3_se3c0"]
+[ext_resource type="PackedScene" uid="uid://bcyhd8mnaxa6m" path="res://Objects/Neos/RaceCountdown.tscn" id="6_uk3dt"]
+[ext_resource type="PackedScene" uid="uid://035mv16jo7nf" path="res://Objects/Room_objects/objWarpNextStage.tscn" id="6_wferm"]
+[ext_resource type="PackedScene" uid="uid://da1qaif83tf17" path="res://Objects/Trigger_system/objTrigger.tscn" id="7_57hx5"]
+[ext_resource type="AudioStream" uid="uid://de5ts46bva4ii" path="res://Audio/Sounds/sndBouncyBlock.wav" id="8_i0ie1"]
+[ext_resource type="PackedScene" uid="uid://b5sj3k4pn1mvu" path="res://Rooms/rPenaltyFake.tscn" id="9_t4cjx"]
+
+[node name="rLevel1" type="Node2D"]
+script = ExtResource("1_0xwcg")
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_i2umm")]
+position = Vector2(-16, 16)
+
+[node name="til32x32" parent="Environment" instance=ExtResource("2_hd0ie")]
+rendering_quadrant_size = 32
+layer_0/tile_data = PackedInt32Array(1179649, 0, 0, 1179650, 0, 0, 1179651, 0, 0, 1179652, 0, 0, 1179653, 0, 0, 1179654, 0, 0, 1179655, 0, 0, 1179656, 0, 0, 1179657, 0, 0, 1179658, 0, 0, 1179659, 0, 0, 1179660, 0, 0, 1179661, 0, 0, 1179662, 0, 0, 1179663, 0, 0, 1179664, 0, 0, 1179665, 0, 0, 1179666, 0, 0, 1179667, 0, 0, 1179668, 0, 0, 1179670, 0, 0, 1179671, 0, 0, 0, 65536, 0, 65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 327680, 65536, 0, 393216, 65536, 0, 458752, 65536, 0, 524288, 65536, 0, 589824, 65536, 0, 655360, 65536, 0, 720896, 65536, 0, 786432, 65536, 0, 851968, 65536, 0, 917504, 65536, 0, 983040, 65536, 0, 1048576, 65536, 0, 1114112, 65536, 0, 1179648, 65536, 0, 1179672, 0, 0, 917528, 65536, 0, 851992, 65536, 0, 786456, 65536, 0, 720920, 65536, 0, 655384, 65536, 0, 589848, 65536, 0, 524312, 65536, 0, 458776, 65536, 0, 393240, 65536, 0, 327704, 65536, 0, 262168, 65536, 0, 196632, 65536, 0, 131096, 65536, 0, 65560, 65536, 0, 24, 65536, 0, 23, 65536, 0, 22, 65536, 0, 21, 65536, 0, 20, 65536, 0, 19, 65536, 0, 18, 65536, 0, 17, 65536, 0, 16, 65536, 0, 15, 65536, 0, 14, 65536, 0, 13, 65536, 0, 12, 65536, 0, 11, 65536, 0, 10, 65536, 0, 9, 65536, 0, 8, 65536, 0, 7, 65536, 0, 6, 65536, 0, 5, 65536, 0, 4, 65536, 0, 3, 65536, 0, 2, 65536, 0, 1, 65536, 0, 1179673, 0, 0, 1179674, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1179681, 0, 0, 917529, 65536, 0, 917530, 65536, 0, 917531, 65536, 0, 917532, 65536, 0, 917533, 65536, 0, 917534, 65536, 0, 917535, 65536, 0, 917536, 65536, 0, 917537, 65536, 0, 852001, 65536, 0, 852002, 65536, 0, 852003, 65536, 0, 786467, 65536, 0, 1179685, 0, 0, 1179686, 0, 0, 1179689, 0, 0, 1179691, 0, 0, 1179694, 0, 0, 1179695, 0, 0, 1179696, 0, 0, 1179697, 0, 0, 1179698, 0, 0, 1179699, 0, 0, 1179700, 0, 0, 1179701, 0, 0, 1179702, 0, 0, 1179703, 0, 0, 1179704, 0, 0, 1179712, 0, 0, 1179713, 0, 0, 1179714, 0, 0)
+
+[node name="objPlayer" parent="Environment" instance=ExtResource("3_se3c0")]
+position = Vector2(398, 516)
+
+[node name="Room_related" type="Node2D" parent="."]
+
+[node name="objCameraFixed" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("2_33lai")]
+position = Vector2(-16, 48)
+target_node = NodePath("../../Environment/objPlayer")
+
+[node name="objWarpStage1" parent="Room_related" instance=ExtResource("6_wferm")]
+position = Vector2(144, 544)
+warp_to = "res://Rooms/01_Testing_rooms/rTestRoom01.tscn"
+next_stage_number = 4
+
+[node name="objWarpStage2" parent="Room_related" instance=ExtResource("6_wferm")]
+position = Vector2(200, 504)
+warp_to = "res://Rooms/01_Testing_rooms/rTestRoom02.tscn"
+next_stage_number = 2
+
+[node name="objWarpStage0" parent="Room_related" instance=ExtResource("6_wferm")]
+position = Vector2(247, 464)
+warp_to = "res://Rooms/01_Testing_rooms/rTestRoom03.tscn"
+next_stage_number = 3
+
+[node name="Gimmicks" type="Node2D" parent="."]
+
+[node name="Hazards" type="Node2D" parent="."]
+
+[node name="Trigger_related" type="Node2D" parent="."]
+
+[node name="RaceCountdown" parent="Trigger_related" node_paths=PackedStringArray("target_instance_zoom") instance=ExtResource("6_uk3dt")]
+target_instance_zoom = NodePath("../../Environment/objMusicPlayer")
+trigger_id = 4
+
+[node name="objTrigger" parent="Trigger_related" instance=ExtResource("7_57hx5")]
+position = Vector2(384, 469)
+trigger_id = 4
+trigger_sound = ExtResource("8_i0ie1")
+
+[node name="objTrigger2" parent="Trigger_related" instance=ExtResource("7_57hx5")]
+position = Vector2(672, 600)
+scale = Vector2(25, 6.9545)
+trigger_id = 2
+
+[node name="PenaltyTrapRoom" parent="Trigger_related" node_paths=PackedStringArray("camera_main_scene") instance=ExtResource("9_t4cjx")]
+position = Vector2(0, 608)
+trigger_id = 2
+camera_main_scene = NodePath("../../Room_related/objCameraFixed")
+
+[connection signal="change_camera_focus" from="Trigger_related/RaceCountdown" to="." method="_on_race_countdown_change_camera_focus"]
+[connection signal="counter_finished" from="Trigger_related/RaceCountdown" to="." method="_on_race_countdown_counter_finished"]

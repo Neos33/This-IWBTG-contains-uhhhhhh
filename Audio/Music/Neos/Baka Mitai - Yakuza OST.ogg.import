@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://b4e0e0q18o0gl"
+path="res://.godot/imported/Baka Mitai - Yakuza OST.ogg-8cfffdff6dfba463afe749ca9f2e84b8.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Neos/Baka Mitai - Yakuza OST.ogg"
+dest_files=["res://.godot/imported/Baka Mitai - Yakuza OST.ogg-8cfffdff6dfba463afe749ca9f2e84b8.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

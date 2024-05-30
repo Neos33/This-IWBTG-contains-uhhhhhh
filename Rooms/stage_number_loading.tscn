@@ -1,0 +1,269 @@
+[gd_scene load_steps=10 format=3 uid="uid://fs5k17q5nqaa"]
+
+[ext_resource type="Script" path="res://Scripts/Neos/StageNumber.gd" id="1_qsn7h"]
+[ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="2_y1vc4"]
+[ext_resource type="AudioStream" uid="uid://b5oqngl8w03id" path="res://Audio/Music/Neos/Free Form Jazz.ogg" id="3_r3hyw"]
+[ext_resource type="Texture2D" uid="uid://ce863j5w8aaua" path="res://Graphics/Neos/Stage_Introduction/page2ofgoogle.jpg" id="4_cykx6"]
+[ext_resource type="Texture2D" uid="uid://sa3kgybt87gm" path="res://Graphics/Neos/Stage_Introduction/stage3.jpg" id="4_iv8e8"]
+[ext_resource type="Texture2D" uid="uid://d35lxbk72a28i" path="res://Graphics/Neos/Stage_Introduction/Stage4_Connect4.jpeg" id="4_s6h5d"]
+[ext_resource type="Texture2D" uid="uid://d366xfbvv7o3k" path="res://Graphics/Neos/Stage_Introduction/Mario5MinutosSpeedrun.png" id="4_vkun3"]
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Arrow.gd" id="5_kyrls"]
+[ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="6_jw6q0"]
+
+[node name="StageNumber" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qsn7h")
+
+[node name="objMusicPlayer" parent="." instance=ExtResource("2_y1vc4")]
+song_id = ExtResource("3_r3hyw")
+
+[node name="TimeTransition" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="Stage1" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Stage1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Stage1"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -26.0
+offset_top = -11.5
+offset_right = 26.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 200
+text = "Stage 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Stage2" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Stage2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Page2Ofgoogle" type="Sprite2D" parent="Stage2"]
+position = Vector2(394, 313)
+texture = ExtResource("4_cykx6")
+
+[node name="ColorRect2" type="ColorRect" parent="Stage2"]
+layout_mode = 0
+offset_right = 768.0
+offset_bottom = 330.0
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="Stage2"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 488.0
+offset_right = 802.0
+offset_bottom = 616.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="Stage2"]
+layout_mode = 0
+offset_top = 128.0
+offset_right = 43.0
+offset_bottom = 151.0
+rotation = -0.546288
+scale = Vector2(7, 7)
+text = "Stage"
+
+[node name="Stage3" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Stage3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.239216, 0.313726, 1)
+
+[node name="Stage3" type="Sprite2D" parent="Stage3"]
+position = Vector2(556, 274)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_iv8e8")
+
+[node name="Label" type="Label" parent="Stage3"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -164.0
+offset_right = 330.0
+offset_bottom = 28.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 0, 0, 1)
+theme_override_constants/outline_size = 100
+theme_override_font_sizes/font_size = 140
+text = "Stage"
+vertical_alignment = 1
+
+[node name="Stage4" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="BlackBorders" type="ColorRect" parent="Stage4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="ColorRect" type="ColorRect" parent="Stage4"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 168.0
+offset_right = -174.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stage4Connect4" type="Sprite2D" parent="Stage4"]
+position = Vector2(397, 381)
+scale = Vector2(2.04464, 2.04464)
+texture = ExtResource("4_s6h5d")
+
+[node name="StageText" type="Label" parent="Stage4"]
+layout_mode = 0
+offset_left = 180.0
+offset_top = 126.0
+offset_right = 446.0
+offset_bottom = 263.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_x = 1
+theme_override_font_sizes/font_size = 100
+text = "Stage"
+
+[node name="MemeText" type="Label" parent="Stage4"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -216.0
+offset_top = 23.0
+offset_right = 216.0
+offset_bottom = 126.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 75
+text = "When"
+horizontal_alignment = 1
+
+[node name="Stage5" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Stage5"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.0431373, 0.0470588, 0.0509804, 1)
+
+[node name="YoutubeVideo" type="Sprite2D" parent="Stage5"]
+position = Vector2(544, 340.25)
+scale = Vector2(0.971429, 0.922442)
+texture = ExtResource("4_vkun3")
+
+[node name="Label" type="Label" parent="Stage5"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -272.0
+offset_right = 222.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 90
+text = "Stage"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Arrow" type="Node2D" parent="Stage5"]
+position = Vector2(640, 128)
+rotation = 0.870051
+scale = Vector2(0.523262, 0.731394)
+script = ExtResource("5_kyrls")
+stem_width = 30.01
+fill_color = Color(1, 0, 0, 1)
+
+[node name="Ellipse" type="Node2D" parent="Stage5"]
+position = Vector2(718, 224)
+script = ExtResource("6_jw6q0")
+size = Vector2(18, 18)
+style = 1
+outline_width = 2
+fill_color = Color(1, 0, 0, 1)
+outline_color = Color(1, 0, 0, 1)
+
+[connection signal="timeout" from="TimeTransition" to="." method="_on_time_transition_timeout"]

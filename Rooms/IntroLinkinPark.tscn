@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://dlpesf1lfu7i7"]
+
+[ext_resource type="AudioStream" uid="uid://poy2xder2wx8" path="res://Audio/Music/Neos/But it came out in 2007 template.mp3" id="1_2uhyv"]
+
+[sub_resource type="Animation" id="Animation_mropl"]
+resource_name = "Intro"
+length = 20.0
+tracks/0/type = "audio"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGM")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"clips": [{
+"end_offset": 137.012,
+"start_offset": 57.7052,
+"stream": ExtResource("1_2uhyv")
+}],
+"times": PackedFloat32Array(-0.0448151)
+}
+tracks/0/use_blend = true
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qiq3f"]
+_data = {
+"Intro": SubResource("Animation_mropl")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_qiq3f")
+}
+
+[node name="BGM" type="AudioStreamPlayer" parent="."]
+bus = &"Music"
