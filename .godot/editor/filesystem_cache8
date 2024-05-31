@@ -1,5 +1,6 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1716998248
+::res://::1717113640
+CircleSpinBackground.gd::GDScript::-1::1717003760::0::1::::<>Node2D<>::
 README.md::TextFile::-1::1713382990::0::1::::<><>::
 ::res://addons/::1715177810
 ::res://addons/2d_shapes/::1715108472
@@ -69,8 +70,11 @@ bckPixelStarfield.png::CompressedTexture2D::7949066825716521950::1713382990::171
 ::res://Graphics/Fonts/::1715008916
 NFPixels-Regular.otf::FontFile::60645552565418258::1713382990::1715008916::1::::<><>::
 OpenSauceOne-Regular.otf::FontFile::7300000390074409602::1713382990::1715008916::1::::<><>::
-::res://Graphics/Neos/::1715208859
+::res://Graphics/Neos/::1717113816
 png-clipart-yuruyuri-anime-4chan-youtube-anime-television-mammal-thumbnail.png::CompressedTexture2D::4859301140786599534::1715024084::1715025816::1::::<><>::
+sprDFNeedle.png::CompressedTexture2D::1412335674173177242::1716047847::1717113819::1::::<><>::
+sprLanciaStratos.png::CompressedTexture2D::5401236051985761368::1716047841::1717113819::1::::<><>::
+sprMinecraftAoOni_strip2.png::CompressedTexture2D::7476212622844203710::1716047855::1717113819::1::::<><>::
 stratos_from_side.jpg::CompressedTexture2D::6544636972218271659::1715015981::1715025816::1::::<><>::
 ::res://Graphics/Neos/Stage_Introduction/::1715209174
 Mario5MinutosSpeedrun.png::CompressedTexture2D::9190468948500672938::1715208812::1715208880::1::::<><>::
@@ -171,7 +175,8 @@ objSpikeBlock.tscn::PackedScene::7389864599945073367::1713382990::0::1::::<><>::
 tilSpikes.tscn::PackedScene::7759151490726632794::1713382990::0::1::::<><>::uid://mgx6x5nn2vb8::::res://Graphics/Tilemaps/tilSpikes.png
 ::res://Objects/Hazards/Enemies/::1713382990
 objEnemyDummy.tscn::PackedScene::3422093015524416041::1713382990::0::1::::<><>::res://Scripts/Hazards/scrDummyEnemy.gd<>res://Scripts/Shaders/shHitBlink.gdshader<>uid://duaprtq8m8lgj::::res://Graphics/Sprites/Enemies/sprDummyEnemy.png
-::res://Objects/Neos/::1716991155
+::res://Objects/Neos/::1717003867
+circle_spin_background.tscn::PackedScene::1176295844866420947::1717003867::0::1::::<><>::res://CircleSpinBackground.gd<>res://addons/2d_shapes/shapes/Ellipse.gd
 RaceCountdown.tscn::PackedScene::2576775565797453698::1716991155::0::1::::<><>::uid://cbb6l3vo1jqjh::::res://Audio/Sounds/Neos/mthree.wav<>res://Scripts/Neos/RaceCountdown.gd<>uid://c21ih4i1dpruh::::res://Audio/Sounds/Neos/mone.wav<>uid://c6xb6ijown7ay::::res://Audio/Sounds/Neos/mtwo.wav<>uid://w1hmyd7gj0bi::::res://Audio/Sounds/Neos/mgo.wav<>uid://xqaw3ttrcuv5::::res://Audio/Sounds/Neos/Brain fart.wav<>uid://br7an7qyxeenr::::res://Audio/Sounds/Neos/Sanctuary Guardians.ogg
 ::res://Objects/Player/::1716991155
 objBloodEmitter.tscn::PackedScene::2501135594795940265::1713382990::0::1::::<><>::uid://iomu88koaflo::::res://Resources/Materials/matBloodEmitter.tres<>res://Scripts/Player/scrBloodEmitter.gd<>uid://burygy08cq204::::res://Graphics/Sprites/Player/sprPlayerFall.png
@@ -216,10 +221,10 @@ objPauseMenuMain.tscn::PackedScene::6958970147856754318::1715179943::0::1::::<><
 ::res://Resources/Licenses/Music/::1713382990
 ::res://Resources/Licenses/SFX/::1713382990
 ::res://Resources/Licenses/Sprites/::1713382990
-::res://Resources/Materials/::1716991153
+::res://Resources/Materials/::1717001517
 matBloodEmitter.tres::ParticleProcessMaterial::591178142174561016::1713382990::0::1::::<><>::
-matJumpParticle.tres::ParticleProcessMaterial::1246747457145317133::1716991153::0::1::::<><>::
-matJumpRefresher.tres::ParticleProcessMaterial::2999776898597579206::1716991153::0::1::::<><>::
+matJumpParticle.tres::ParticleProcessMaterial::1246747457145317133::1717001516::0::1::::<><>::
+matJumpRefresher.tres::ParticleProcessMaterial::2999776898597579206::1717001516::0::1::::<><>::
 ::res://Resources/Project/::1715027106
 default_bus_layout.tres::AudioBusLayout::8030066203278267541::1715027106::0::1::::<><>::
 icon.png::CompressedTexture2D::9059171887377794089::1713382990::1715008918::1::::<><>::

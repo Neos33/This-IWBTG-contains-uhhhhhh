@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://bjvw2gfnahdw4"]
+
+[ext_resource type="Script" path="res://Scripts/Neos/objLancia.gd" id="1_dwrwm"]
+[ext_resource type="Texture2D" uid="uid://ci7ntlmb1n465" path="res://Graphics/Neos/sprLanciaStratos.png" id="2_5q7h4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tra4k"]
+size = Vector2(648, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bf1va"]
+size = Vector2(16, 136)
+
+[sub_resource type="Curve2D" id="Curve2D_0jl0t"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 0, 0, -174, -0.5, 174, 0.5, 256, -256, 0, 0, 0, 0, 512, 0)
+}
+point_count = 3
+
+[node name="objLancia" type="CharacterBody2D"]
+collision_layer = 8
+script = ExtResource("1_dwrwm")
+
+[node name="SpriteCar" type="Sprite2D" parent="."]
+texture = ExtResource("2_5q7h4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(4, 56)
+shape = SubResource("RectangleShape2D_tra4k")
+
+[node name="BlockDetection" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionBlock" type="CollisionShape2D" parent="BlockDetection"]
+position = Vector2(352, 60)
+shape = SubResource("RectangleShape2D_bf1va")
+debug_color = Color(0.865011, 0.330845, 0.356587, 0.42)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_0jl0t")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+rotation = -0.785398
+rotates = false
+loop = false
+
+[node name="Car" type="Sprite2D" parent="Path2D/PathFollow2D"]
+rotation = 0.785398
+texture = ExtResource("2_5q7h4")
+
+[connection signal="body_entered" from="BlockDetection" to="." method="_on_block_detection_body_entered"]
