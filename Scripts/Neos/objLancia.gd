@@ -13,16 +13,13 @@ var flag_crashed : bool = false
 @onready var path_follow_2d = $Path2D/PathFollow2D
 @onready var car = $Path2D/PathFollow2D/Car
 @onready var sprite_car = $SpriteCar
+@onready var hitbox = $Hitbox
 
 func _ready():
 	car.visible = false
 	
 	
 func _physics_process(delta):
-	# Add the gravity.
-	if not is_on_floor() and crashed and not flag_crashed:
-		flag_crashed = true
-		
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
@@ -30,9 +27,10 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
-
 	if not crashed:
 		move_and_slide()
+		
+	#car.rotation = lerp(0, 180, path_follow_2d.progress_ratio)
 
 
 func _on_block_detection_body_entered(body):
@@ -46,3 +44,4 @@ func _on_block_detection_body_entered(body):
 		sprite_car.visible = false
 		
 	block_detection.disabled = true
+	hitbox.disabled = true

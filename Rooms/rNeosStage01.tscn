@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://jb54q5yqegth"]
+[gd_scene load_steps=13 format=3 uid="uid://jb54q5yqegth"]
 
 [ext_resource type="Script" path="res://Rooms/rNeosStage01.gd" id="1_0xwcg"]
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_i2umm"]
@@ -11,6 +11,7 @@
 [ext_resource type="AudioStream" uid="uid://de5ts46bva4ii" path="res://Audio/Sounds/sndBouncyBlock.wav" id="8_i0ie1"]
 [ext_resource type="PackedScene" uid="uid://b5sj3k4pn1mvu" path="res://Rooms/rPenaltyFake.tscn" id="9_t4cjx"]
 [ext_resource type="PackedScene" uid="uid://bjvw2gfnahdw4" path="res://Objects/Neos/obj_lancia.tscn" id="11_khe5k"]
+[ext_resource type="PackedScene" uid="uid://bes18loo3v73l" path="res://Objects/Room_objects/objSaveBlocker.tscn" id="12_5u8u2"]
 
 [node name="rLevel1" type="Node2D"]
 script = ExtResource("1_0xwcg")
@@ -75,6 +76,9 @@ camera_main_scene = NodePath("../../Room_related/objCameraFixed")
 
 [node name="objLancia" parent="." instance=ExtResource("11_khe5k")]
 position = Vector2(-32, 440)
+
+[node name="objSaveBlocker" parent="objLancia" instance=ExtResource("12_5u8u2")]
+position = Vector2(600, 88)
 
 [connection signal="change_camera_focus" from="Trigger_related/RaceCountdown" to="." method="_on_race_countdown_change_camera_focus"]
 [connection signal="counter_finished" from="Trigger_related/RaceCountdown" to="." method="_on_race_countdown_counter_finished"]
