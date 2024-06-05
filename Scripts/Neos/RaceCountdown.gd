@@ -6,6 +6,7 @@ extends Control
 @onready var animation_player = $CanvasLayer/AnimationPlayer
 
 var triggered: bool = false
+var music_muted: bool = false
 
 signal change_camera_focus
 signal counter_finished
@@ -35,6 +36,11 @@ func resize_camera():
 	# Pauses the game
 	set_pause_mode(true)
 	
+	# Pause the song 
+	if GLOBAL_GAME.music_is_playing == true:
+		GLOBAL_GAME.music_is_playing = false;
+		music_muted = true
+	
 	var _tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	_tween.tween_property(camera_meme, "position", _target_pos, 1.0)
 	_tween.set_parallel().tween_property(camera_meme, "zoom", Vector2(2, 2), 1.0)
@@ -61,6 +67,10 @@ func _on_animation_player_animation_finished(anim_name):
 	process_mode = Node.PROCESS_MODE_INHERIT
 	# Unpauses the game
 	set_pause_mode(false)
+	# Unpauses the song 
+	if music_muted:
+		GLOBAL_GAME.music_is_playing = true;
+	# Delete scene
 	queue_free()
 
 func set_pause_mode(mode: bool):

@@ -1,10 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://dlpesf1lfu7i7"]
+[gd_scene load_steps=5 format=3 uid="uid://dlpesf1lfu7i7"]
 
-[ext_resource type="AudioStream" uid="uid://poy2xder2wx8" path="res://Audio/Music/Neos/But it came out in 2007 template.mp3" id="1_2uhyv"]
+[ext_resource type="AudioStream" uid="uid://sv7khpx6shdk" path="res://Audio/Music/Neos/But it came out in 2007 template.ogg" id="1_hvreq"]
 
 [sub_resource type="Animation" id="Animation_mropl"]
 resource_name = "Intro"
-length = 20.0
+length = 10.0
 tracks/0/type = "audio"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -13,17 +13,45 @@ tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
 "clips": [{
-"end_offset": 137.012,
-"start_offset": 57.7052,
-"stream": ExtResource("1_2uhyv")
+"end_offset": 136.518,
+"start_offset": 59.0174,
+"stream": ExtResource("1_hvreq")
 }],
-"times": PackedFloat32Array(-0.0448151)
+"times": PackedFloat32Array(0)
 }
 tracks/0/use_blend = true
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("BGM:volume_db")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [-80.0, 0.0]
+}
+
+[sub_resource type="Animation" id="Animation_rxmnn"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("BGM:volume_db")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qiq3f"]
 _data = {
-"Intro": SubResource("Animation_mropl")
+"Intro": SubResource("Animation_mropl"),
+"RESET": SubResource("Animation_rxmnn")
 }
 
 [node name="Control" type="Control"]

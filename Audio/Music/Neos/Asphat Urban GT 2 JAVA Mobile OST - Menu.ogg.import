@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://di6lx46u7ifa6"
+path="res://.godot/imported/Asphat Urban GT 2 JAVA Mobile OST - Menu.ogg-daa250b7904f41dea909f0e1e87aa229.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Neos/Asphat Urban GT 2 JAVA Mobile OST - Menu.ogg"
+dest_files=["res://.godot/imported/Asphat Urban GT 2 JAVA Mobile OST - Menu.ogg-daa250b7904f41dea909f0e1e87aa229.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
