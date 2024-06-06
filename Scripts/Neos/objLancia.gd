@@ -2,10 +2,10 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
 
 var crashed : bool = false
 var flag_crashed : bool = false
+var start_moving: bool = false
 
 @onready var block_detection = $BlockDetection/CollisionBlock
 @onready var path_2d = $Path2D
@@ -23,8 +23,8 @@ func _physics_process(delta):
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	if start_moving:
+		velocity.x = SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		

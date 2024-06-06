@@ -10,6 +10,7 @@ var music_muted: bool = false
 
 signal change_camera_focus
 signal counter_finished
+signal race_started
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -22,6 +23,7 @@ func _process(delta):
 		animation_player.play("counter")
 		GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndBlockChange)
 		triggered = true
+		GLOBAL_INSTANCES.objPlayerID.frozen = true
 	
 
 func resize_camera():
@@ -77,3 +79,7 @@ func set_pause_mode(mode: bool):
 	GLOBAL_GAME.game_paused = mode
 	get_tree().set_pause(mode)
 	GLOBAL_GAME.can_pause = !mode
+	
+func lights_out_and_away_we_go():
+	emit_signal("race_started")
+	

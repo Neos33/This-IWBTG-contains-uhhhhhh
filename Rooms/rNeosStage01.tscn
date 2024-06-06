@@ -84,3 +84,4 @@ position = Vector2(568, 535)
 
 [connection signal="change_camera_focus" from="Trigger_related/RaceCountdown" to="." method="_on_race_countdown_change_camera_focus"]
 [connection signal="counter_finished" from="Trigger_related/RaceCountdown" to="." method="_on_race_countdown_counter_finished"]
+[connection signal="race_started" from="Trigger_related/RaceCountdown" to="." method="_on_race_countdown_race_started"]
