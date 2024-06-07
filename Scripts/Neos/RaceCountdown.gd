@@ -23,7 +23,10 @@ func _process(delta):
 		animation_player.play("counter")
 		GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndBlockChange)
 		triggered = true
+		
+		# Make player stop
 		GLOBAL_INSTANCES.objPlayerID.frozen = true
+		GLOBAL_INSTANCES.objPlayerID.velocity.x = 0
 	
 
 func resize_camera():

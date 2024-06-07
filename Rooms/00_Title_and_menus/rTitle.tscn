@@ -1,9 +1,10 @@
-[gd_scene load_steps=26 format=3 uid="uid://c040pj2dgs0o"]
+[gd_scene load_steps=27 format=3 uid="uid://c040pj2dgs0o"]
 
 [ext_resource type="Script" path="res://Scripts/UI/scrTitle.gd" id="1_40ygd"]
 [ext_resource type="FontFile" uid="uid://4m283seugry" path="res://Graphics/Fonts/NFPixels-Regular.otf" id="1_jst16"]
 [ext_resource type="Shader" path="res://Scripts/Shaders/shScrollMotion.gdshader" id="2_av8xl"]
 [ext_resource type="PackedScene" uid="uid://uc3dfxqfjl7l" path="res://Objects/Backgrounds/objBackgroundTexture.tscn" id="2_ljlgv"]
+[ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="3_1qmli"]
 [ext_resource type="AudioStream" uid="uid://di6lx46u7ifa6" path="res://Audio/Music/Neos/Asphat Urban GT 2 JAVA Mobile OST - Menu.ogg" id="3_b58l2"]
 [ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="3_u2wbq"]
 [ext_resource type="Texture2D" uid="uid://nc32sed5ti8l" path="res://Graphics/Sprites/Player/sprPlayerRunning.png" id="5_0i3ae"]
@@ -187,6 +188,8 @@ libraries = {
 stream = ExtResource("3_b58l2")
 autoplay = true
 bus = &"Music"
+
+[node name="objMusicPlayer" parent="Environment" instance=ExtResource("3_1qmli")]
 
 [node name="Visuals" type="Node2D" parent="."]
 
