@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
+@export var speed = 200.0
 
 var crashed : bool = false
 var flag_crashed : bool = false
@@ -24,9 +24,9 @@ func _physics_process(delta):
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if start_moving:
-		velocity.x = SPEED
+		velocity.x = speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
+		velocity.x = move_toward(velocity.x, 0, speed)
 		
 	# Not able to move if we already crashed
 	if not crashed:
@@ -45,6 +45,8 @@ func _on_block_detection_body_entered(body):
 		
 		car.visible = true
 		sprite_car.visible = false
-		block_detection.disabled = true
 		hitbox.disabled = true
+		hitbox.position = Vector2(-2000, -2000)
+		block_detection.disabled = true
+		
 

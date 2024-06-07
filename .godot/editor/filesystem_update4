@@ -8,4 +8,5 @@ res://Objects/Player/objPlayer.tscn
 res://Objects/Room_objects/objWarpNextStage.tscn
 res://Objects/Neos/obj_lancia.tscn
 res://Rooms/IntroLinkinPark.tscn
-res://Scripts/Neos/RaceCountdown.gd
+res://Rooms/rNeosStage01.gd
+res://Scripts/Neos/objLancia.gd

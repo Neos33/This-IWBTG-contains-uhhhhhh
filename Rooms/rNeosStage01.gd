@@ -14,15 +14,17 @@ func _process(delta):
 	pass
 
 
+# Game freeze and focus to whatever node I selected in the export variable of RaceCountdown
 func _on_race_countdown_change_camera_focus():
 	obj_camera_fixed.enabled = false
 
 
+# Animation player ended, camera back to normal behaviour
 func _on_race_countdown_counter_finished():
 	obj_camera_fixed.enabled = true
 
 
-
+# Race GO!, car move and unfreeze the player
 func _on_race_countdown_race_started():
 	obj_lancia.start_moving = true
 	GLOBAL_INSTANCES.objPlayerID.frozen = false
