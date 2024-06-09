@@ -4,10 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://ci7ntlmb1n465" path="res://Graphics/Neos/sprLanciaStratos.png" id="2_5q7h4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tra4k"]
-size = Vector2(648, 144)
+size = Vector2(656, 144)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bf1va"]
-size = Vector2(16, 88)
+size = Vector2(8, 88)
 
 [sub_resource type="Curve2D" id="Curve2D_0jl0t"]
 _data = {

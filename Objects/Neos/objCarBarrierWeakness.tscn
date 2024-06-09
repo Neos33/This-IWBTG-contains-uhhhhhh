@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://b40gwarhjqfte"]
+
+[ext_resource type="Script" path="res://Scripts/Neos/CarBarrierWeak.gd" id="1_fyxov"]
+[ext_resource type="Texture2D" uid="uid://ce764rqb8dydy" path="res://Graphics/Tiles/tilAllTiles.png" id="2_xrjpb"]
+[ext_resource type="PackedScene" uid="uid://bes18loo3v73l" path="res://Objects/Room_objects/objSaveBlocker.tscn" id="3_os2sm"]
+
+[node name="CarBarrierWeak" type="Node2D"]
+script = ExtResource("1_fyxov")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 144)
+scale = Vector2(1, 7)
+texture = ExtResource("2_xrjpb")
+region_enabled = true
+region_rect = Rect2(32, 64, 32, 32)
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("2_xrjpb")
+region_enabled = true
+region_rect = Rect2(32, 96, 32, 32)
+
+[node name="objSaveBlocker" parent="." instance=ExtResource("3_os2sm")]
+position = Vector2(24, 128)
+scale = Vector2(1, 4.6)
