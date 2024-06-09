@@ -15,6 +15,7 @@ var object_return: int = 816
 # Screen fade animation
 func _ready():
 	screen_fade_animation.play("screen_fade")
+	GLOBAL_MUSIC.stop_music()
 
 
 # Visuals

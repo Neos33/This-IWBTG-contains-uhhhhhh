@@ -49,3 +49,8 @@ func set_loop_positions():
 	if loop_end != 0.0:
 		if get_playback_position() > loop_end:
 			seek(loop_start)
+			
+			
+func stop_music():
+	stop()
+	song_playing = null

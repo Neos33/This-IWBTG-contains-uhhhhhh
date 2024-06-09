@@ -15,6 +15,8 @@ func _ready():
 	
 	# Focuses on StartGame
 	get_node("ButtonContainer/StartGame").grab_focus()
+	
+	GLOBAL_MUSIC.stop_music()
 
 
 func _physics_process(_delta):
