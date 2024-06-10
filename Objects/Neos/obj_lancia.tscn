@@ -1,7 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://bjvw2gfnahdw4"]
+[gd_scene load_steps=7 format=3 uid="uid://bjvw2gfnahdw4"]
 
 [ext_resource type="Script" path="res://Scripts/Neos/objLancia.gd" id="1_dwrwm"]
 [ext_resource type="Texture2D" uid="uid://ci7ntlmb1n465" path="res://Graphics/Neos/sprLanciaStratos.png" id="2_5q7h4"]
+[ext_resource type="AudioStream" uid="uid://l3bu5stvbna" path="res://Audio/Sounds/Neos/bike_crashes.wav" id="3_wg1ir"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tra4k"]
 size = Vector2(656, 144)
@@ -47,5 +48,17 @@ loop = false
 [node name="Car" type="Sprite2D" parent="Path2D/PathFollow2D"]
 rotation = 0.785398
 texture = ExtResource("2_5q7h4")
+
+[node name="sfxCrash" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_wg1ir")
+bus = &"Sounds"
+
+[node name="RaceStatusText" type="Label" parent="."]
+offset_left = -152.0
+offset_top = -168.0
+offset_right = -112.0
+offset_bottom = -145.0
+horizontal_alignment = 2
+vertical_alignment = 1
 
 [connection signal="body_entered" from="BlockDetection" to="." method="_on_block_detection_body_entered"]

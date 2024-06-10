@@ -14,6 +14,8 @@ var start_moving: bool = false
 @onready var car = $Path2D/PathFollow2D/Car
 @onready var sprite_car = $SpriteCar
 @onready var hitbox = $Hitbox
+@onready var sfx_crash = $sfxCrash
+@onready var race_status_text = $RaceStatusText
 
 func _ready():
 	car.visible = false
@@ -37,7 +39,8 @@ func _physics_process(delta):
 
 func _on_block_detection_body_entered(body):
 	if not crashed:
-		GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndBlockChange)
+		#GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndBlockChange)
+		sfx_crash.play()
 		crashed = true
 		var _tween = create_tween()
 		_tween.tween_property(path_follow_2d, "progress_ratio", 1, 3.0)
@@ -48,5 +51,10 @@ func _on_block_detection_body_entered(body):
 		hitbox.disabled = true
 		hitbox.position = Vector2(-2000, -2000)
 		block_detection.disabled = true
+		await(_tween.finished)
+		update_text("You won")
 		
 
+func update_text(label, text_position = Vector2(0, 0)):
+	race_status_text.text = label
+	race_status_text.position += text_position

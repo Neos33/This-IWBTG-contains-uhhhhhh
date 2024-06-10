@@ -1,7 +1,7 @@
-res://Rooms/rNeosStage01.tscn
+res://Rooms/00_Title_and_menus/rTitle.tscn
 res://Resources/Materials/matJumpParticle.tres
 res://Resources/Materials/matJumpRefresher.tres
-res://Rooms/00_Title_and_menus/rTitle.tscn
+res://Rooms/rNeosStage01.tscn
 res://Objects/Neos/RaceCountdown.tscn
 res://Rooms/rPenaltyFake.tscn
 res://Objects/Player/objPlayer.tscn
@@ -9,5 +9,7 @@ res://Objects/Room_objects/objWarpNextStage.tscn
 res://Objects/Neos/obj_lancia.tscn
 res://Rooms/IntroLinkinPark.tscn
 res://Rooms/00_Title_and_menus/rMenuMain.tscn
-res://Scripts/Neos/CarBarrierWeak.gd
 res://Objects/Neos/objCarBarrierWeakness.tscn
+res://Scripts/Neos/CarBarrierWeak.gd
+res://Scripts/Neos/objLancia.gd
+res://Rooms/rNeosStage01.gd

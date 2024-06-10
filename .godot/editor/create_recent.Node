@@ -1,5 +1,6 @@
-Sprite2D
+Label
 AudioStreamPlayer
+Sprite2D
 Node
 Node2D
 PathFollow2D
@@ -10,5 +11,4 @@ RayCast2D
 CharacterBody2D
 Ellipse
 CanvasModulate
-Label
 RichTextLabel
