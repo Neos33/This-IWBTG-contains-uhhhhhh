@@ -1,11 +1,12 @@
-[gd_scene load_steps=16 format=3 uid="uid://jb54q5yqegth"]
+[gd_scene load_steps=18 format=3 uid="uid://jb54q5yqegth"]
 
 [ext_resource type="Script" path="res://Rooms/rNeosStage01.gd" id="1_0xwcg"]
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_i2umm"]
 [ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="2_33lai"]
 [ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="2_hd0ie"]
+[ext_resource type="PackedScene" uid="uid://cy63jsjk6yuie" path="res://Objects/Neos/bg_sc.tscn" id="2_ql35v"]
+[ext_resource type="AudioStream" uid="uid://don7bjg8r5lnh" path="res://Audio/Music/Neos/royals.ogg" id="3_atidu"]
 [ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="3_se3c0"]
-[ext_resource type="AudioStream" uid="uid://sv7khpx6shdk" path="res://Audio/Music/Neos/But it came out in 2007 template.ogg" id="3_ugyxa"]
 [ext_resource type="PackedScene" uid="uid://bcyhd8mnaxa6m" path="res://Objects/Neos/RaceCountdown.tscn" id="6_uk3dt"]
 [ext_resource type="PackedScene" uid="uid://035mv16jo7nf" path="res://Objects/Room_objects/objWarpNextStage.tscn" id="6_wferm"]
 [ext_resource type="PackedScene" uid="uid://da1qaif83tf17" path="res://Objects/Trigger_system/objTrigger.tscn" id="7_57hx5"]
@@ -16,14 +17,43 @@
 [ext_resource type="AudioStream" uid="uid://xqaw3ttrcuv5" path="res://Audio/Sounds/Neos/Brain fart.wav" id="12_8mf5v"]
 [ext_resource type="PackedScene" uid="uid://b40gwarhjqfte" path="res://Objects/Neos/objCarBarrierWeakness.tscn" id="15_d2wtg"]
 
+[sub_resource type="ViewportTexture" id="ViewportTexture_7sx0w"]
+viewport_path = NodePath("Environment/SubViewportContainer/SubViewport")
+
 [node name="rLevel1" type="Node2D"]
 script = ExtResource("1_0xwcg")
 
 [node name="Environment" type="Node2D" parent="."]
 
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Environment"]
+offset_left = -192.0
+offset_top = -128.0
+offset_right = -64.0
+
+[node name="SubViewport" type="SubViewport" parent="Environment/SubViewportContainer"]
+handle_input_locally = false
+size = Vector2i(128, 128)
+render_target_update_mode = 4
+
+[node name="bgSC" parent="Environment/SubViewportContainer/SubViewport" instance=ExtResource("2_ql35v")]
+texture_repeat = 2
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Environment"]
+scroll_ignore_camera_zoom = true
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Environment/ParallaxBackground"]
+texture_repeat = 2
+motion_mirroring = Vector2(128, 128)
+
+[node name="BGViewport" type="Sprite2D" parent="Environment/ParallaxBackground/ParallaxLayer"]
+texture = SubResource("ViewportTexture_7sx0w")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 608)
+
 [node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_i2umm")]
 position = Vector2(-16, 16)
-song_id = ExtResource("3_ugyxa")
+song_id = ExtResource("3_atidu")
 
 [node name="til32x32" parent="Environment" instance=ExtResource("2_hd0ie")]
 rendering_quadrant_size = 32

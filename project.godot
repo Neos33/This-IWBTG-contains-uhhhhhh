@@ -54,6 +54,7 @@ enabled=PackedStringArray("res://addons/2d_shapes/plugin.cfg")
 
 folder_colors={
 "res://Audio/": "blue",
+"res://Audio/Music/Neos/": "red",
 "res://Audio/Sounds/Neos/": "yellow",
 "res://Graphics/": "yellow",
 "res://Objects/": "red",

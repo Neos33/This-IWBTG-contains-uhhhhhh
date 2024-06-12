@@ -1,0 +1,59 @@
+[gd_scene load_steps=7 format=3 uid="uid://x2g11qxvacu7"]
+
+[ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_50aq1"]
+[ext_resource type="PackedScene" uid="uid://cy63jsjk6yuie" path="res://Objects/Neos/bg_sc.tscn" id="1_mtvu3"]
+[ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="2_ftiko"]
+[ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="3_iwq5h"]
+[ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="5_pwhjy"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_nqkln"]
+viewport_path = NodePath("Environment/SubViewportContainer/SubViewport")
+
+[node name="rTemplate" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="Environment"]
+offset_left = -192.0
+offset_top = -192.0
+offset_right = -64.0
+offset_bottom = -64.0
+
+[node name="SubViewport" type="SubViewport" parent="Environment/SubViewportContainer"]
+size = Vector2i(128, 128)
+
+[node name="bgSC" parent="Environment/SubViewportContainer/SubViewport" instance=ExtResource("1_mtvu3")]
+
+[node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_50aq1")]
+position = Vector2(-16, 16)
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="Environment"]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Environment/ParallaxBackground"]
+motion_mirroring = Vector2(128, 128)
+
+[node name="Sprite2D" type="Sprite2D" parent="Environment/ParallaxBackground/ParallaxLayer"]
+texture_repeat = 2
+texture = SubResource("ViewportTexture_nqkln")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 800, 608)
+
+[node name="til32x32" parent="Environment" instance=ExtResource("3_iwq5h")]
+rendering_quadrant_size = 32
+layer_0/tile_data = PackedInt32Array(720896, 0, 1, 720897, 0, 1, 720898, 0, 1, 720899, 0, 1, 720900, 0, 1, 720901, 0, 1, 720902, 0, 1, 720903, 0, 1, 720904, 0, 1, 720905, 0, 1, 720906, 0, 1, 786443, 0, 1, 786444, 0, 1, 786445, 0, 1, 786446, 0, 1, 786447, 0, 1, 786448, 0, 1)
+
+[node name="Room_related" type="Node2D" parent="."]
+
+[node name="objCameraFixed" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("2_ftiko")]
+position = Vector2(-16, 48)
+target_node = NodePath("../objPlayer")
+
+[node name="objPlayer" parent="Room_related" instance=ExtResource("5_pwhjy")]
+position = Vector2(296, 296)
+
+[node name="Gimmicks" type="Node2D" parent="."]
+
+[node name="Hazards" type="Node2D" parent="."]
+
+[node name="Trigger_related" type="Node2D" parent="."]
