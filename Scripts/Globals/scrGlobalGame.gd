@@ -283,6 +283,8 @@ func is_valid_room():
 				return false
 			"rMenuControls":
 				return false
+			"rMenuCredits":
+				return false
 			_:
 				return true
 

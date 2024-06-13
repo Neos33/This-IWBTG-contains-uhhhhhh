@@ -17,6 +17,7 @@ grow_vertical = 2
 script = ExtResource("1_7emf3")
 files_menu = "res://Rooms/00_Title_and_menus/rMenuFiles.tscn"
 settings_menu = "res://Rooms/00_Title_and_menus/rMenuSettings.tscn"
+credits_menu = "res://Rooms/00_Title_and_menus/rMenuCredits.tscn"
 metadata/_edit_lock_ = true
 
 [node name="Environment" type="Node2D" parent="."]
@@ -53,7 +54,7 @@ offset_left = 272.0
 offset_top = 272.0
 offset_right = 528.0
 offset_bottom = 512.0
-theme_override_constants/separation = 80
+theme_override_constants/separation = 55
 alignment = 1
 
 [node name="StartGame" parent="ButtonContainer" instance=ExtResource("7_34exa")]
@@ -70,14 +71,23 @@ layout_mode = 2
 focus_neighbor_left = NodePath(".")
 focus_neighbor_top = NodePath("../StartGame")
 focus_neighbor_right = NodePath(".")
-focus_neighbor_bottom = NodePath("../ExitGame")
+focus_neighbor_bottom = NodePath("../Credits")
 action_mode = 0
 _text = "Options"
+
+[node name="Credits" parent="ButtonContainer" instance=ExtResource("7_34exa")]
+layout_mode = 2
+focus_neighbor_left = NodePath(".")
+focus_neighbor_top = NodePath("../Options")
+focus_neighbor_right = NodePath(".")
+focus_neighbor_bottom = NodePath("../ExitGame")
+action_mode = 0
+_text = "Credits"
 
 [node name="ExitGame" parent="ButtonContainer" instance=ExtResource("7_34exa")]
 layout_mode = 2
 focus_neighbor_left = NodePath(".")
-focus_neighbor_top = NodePath("../Options")
+focus_neighbor_top = NodePath("../Credits")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../StartGame")
 action_mode = 0
@@ -119,4 +129,5 @@ text = "[Esc] Exit Game "
 
 [connection signal="pressed" from="ButtonContainer/StartGame" to="." method="_on_start_game_pressed"]
 [connection signal="pressed" from="ButtonContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="ButtonContainer/Credits" to="." method="_on_credits_pressed"]
 [connection signal="pressed" from="ButtonContainer/ExitGame" to="." method="_on_exit_game_pressed"]

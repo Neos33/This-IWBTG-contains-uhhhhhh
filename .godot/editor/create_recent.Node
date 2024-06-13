@@ -1,3 +1,6 @@
+MarginContainer
+Label
+Control
 Node2D
 Node
 AnimationPlayer
@@ -10,5 +13,3 @@ ParallaxLayer
 ParallaxBackground
 SubViewportContainer
 SubViewport
-Label
-AudioStreamPlayer

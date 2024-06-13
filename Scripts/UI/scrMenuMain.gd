@@ -2,6 +2,7 @@ extends Control
 
 @export_file("*.tscn") var files_menu: String
 @export_file("*.tscn") var settings_menu: String
+@export_file("*.tscn") var credits_menu: String
 
 
 
@@ -56,6 +57,16 @@ func _on_options_pressed():
 		GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndPause)
 
 
+# Credits
+func _on_credits_pressed():
+	if credits_menu != null:
+		get_tree().change_scene_to_file(credits_menu)
+		GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndPause)
+
+
 # Exits the game
 func _on_exit_game_pressed():
 	get_tree().quit()
+
+
+
