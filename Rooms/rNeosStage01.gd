@@ -2,13 +2,22 @@ extends Node2D
 
 @onready var obj_camera_fixed = $Room_related/objCameraFixed
 @onready var obj_lancia = $objLancia
+@onready var race_countdown = $Trigger_related/RaceCountdown
 
 var lancia_won: bool = false
 var loop_position: float
+const kid_audience_offset: int = 28
+const kid_audience_total: int = 16
+var kid_lucky
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	loop_position = randf_range(20.317, 26.765)
+	kid_lucky = get_node("Room_related/Audience/objPlayerAudience" + str(randi_range(1, kid_audience_total)))
+	kid_lucky.rotation = 3.15 # idk why 3.15 to rotate 180 degrees
+	kid_lucky.scale.x = -1
+	kid_lucky.position.y -= kid_audience_offset
+	race_countdown.target_instance_zoom = kid_lucky
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -177,7 +177,7 @@ script = ExtResource("1_qesj7")
 
 [node name="playerSprites" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_vrq0l")
-animation = &"idle"
+animation = &"fall"
 
 [node name="playerMask" type="CollisionShape2D" parent="."]
 editor_description = "Should only detect:

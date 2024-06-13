@@ -1,8 +1,7 @@
-res://Rooms/rNeosStage01.tscn
+res://Rooms/00_Title_and_menus/rTitle.tscn
 res://Resources/Materials/matJumpParticle.tres
 res://Resources/Materials/matJumpRefresher.tres
-res://Rooms/rNeosStage01.gd
-res://Rooms/00_Title_and_menus/rTitle.tscn
+res://Rooms/rNeosStage01.tscn
 res://Objects/Neos/RaceCountdown.tscn
 res://Rooms/rPenaltyFake.tscn
 res://Objects/Player/objPlayer.tscn
@@ -13,3 +12,7 @@ res://Rooms/00_Title_and_menus/rMenuMain.tscn
 res://Objects/Neos/objCarBarrierWeakness.tscn
 res://Objects/Neos/bg_sc.tscn
 res://Rooms/rNeosStage02.tscn
+res://Rooms/rNeosStage02.gd
+res://Scripts/Neos/objPlayerAudience.gd
+res://Objects/Neos/obj_player_audience.tscn
+res://Rooms/rNeosStage01.gd

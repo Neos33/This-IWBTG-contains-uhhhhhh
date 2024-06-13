@@ -1,15 +1,18 @@
-[gd_scene load_steps=7 format=3 uid="uid://x2g11qxvacu7"]
+[gd_scene load_steps=9 format=3 uid="uid://x2g11qxvacu7"]
 
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_50aq1"]
 [ext_resource type="PackedScene" uid="uid://cy63jsjk6yuie" path="res://Objects/Neos/bg_sc.tscn" id="1_mtvu3"]
+[ext_resource type="Script" path="res://Rooms/rNeosStage02.gd" id="1_u28nv"]
 [ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="2_ftiko"]
 [ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="3_iwq5h"]
+[ext_resource type="AudioStream" uid="uid://don7bjg8r5lnh" path="res://Audio/Music/Neos/royals.ogg" id="4_77x8l"]
 [ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="5_pwhjy"]
 
 [sub_resource type="ViewportTexture" id="ViewportTexture_nqkln"]
 viewport_path = NodePath("Environment/SubViewportContainer/SubViewport")
 
-[node name="rTemplate" type="Node2D"]
+[node name="rLevel2" type="Node2D"]
+script = ExtResource("1_u28nv")
 
 [node name="Environment" type="Node2D" parent="."]
 
@@ -20,19 +23,22 @@ offset_right = -64.0
 offset_bottom = -64.0
 
 [node name="SubViewport" type="SubViewport" parent="Environment/SubViewportContainer"]
+handle_input_locally = false
 size = Vector2i(128, 128)
+render_target_update_mode = 4
 
 [node name="bgSC" parent="Environment/SubViewportContainer/SubViewport" instance=ExtResource("1_mtvu3")]
 
 [node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_50aq1")]
 position = Vector2(-16, 16)
+song_id = ExtResource("4_77x8l")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="Environment"]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="Environment/ParallaxBackground"]
 motion_mirroring = Vector2(128, 128)
 
-[node name="Sprite2D" type="Sprite2D" parent="Environment/ParallaxBackground/ParallaxLayer"]
+[node name="BackgroundTexture" type="Sprite2D" parent="Environment/ParallaxBackground/ParallaxLayer"]
 texture_repeat = 2
 texture = SubResource("ViewportTexture_nqkln")
 centered = false
@@ -41,7 +47,7 @@ region_rect = Rect2(0, 0, 800, 608)
 
 [node name="til32x32" parent="Environment" instance=ExtResource("3_iwq5h")]
 rendering_quadrant_size = 32
-layer_0/tile_data = PackedInt32Array(720896, 0, 1, 720897, 0, 1, 720898, 0, 1, 720899, 0, 1, 720900, 0, 1, 720901, 0, 1, 720902, 0, 1, 720903, 0, 1, 720904, 0, 1, 720905, 0, 1, 720906, 0, 1, 786443, 0, 1, 786444, 0, 1, 786445, 0, 1, 786446, 0, 1, 786447, 0, 1, 786448, 0, 1)
+layer_0/tile_data = PackedInt32Array(720896, 0, 1, 720897, 0, 1, 720898, 0, 1, 720899, 0, 1, 720900, 0, 1, 720901, 0, 1, 720902, 0, 1, 720903, 0, 1, 720904, 0, 1, 720905, 0, 1, 720906, 0, 1, 786443, 0, 1, 786444, 0, 1, 786445, 0, 1, 786446, 0, 1, 786447, 0, 1, 786448, 0, 1, 851985, 0, 1, 917522, 0, 1, 983058, 0, 1, 1048593, 0, 1, 1114129, 0, 1, 1179665, 0, 1, 1245201, 0, 1, 1245202, 0, 1, 1310738, 0, 1, 1310737, 0, 1, 851990, 0, 1, 851991, 0, 1, 917527, 0, 1, 983063, 0, 1, 1048599, 0, 1, 1048598, 0, 1, 1114134, 0, 1, 1179670, 0, 1, 1179671, 0, 1, 720918, 0, 1, 655383, 0, 1, 655384, 0, 1, 1441811, 0, 1, 1441812, 0, 1, 1441813, 0, 1, 1441814, 0, 1, 1441815, 0, 1, 1441816, 0, 1, 1376280, 0, 1, 1376281, 0, 1, 1376282, 0, 1, 1310746, 0, 1, 1310747, 0, 1, 1245211, 0, 1, 1245212, 0, 1, 1179676, 0, 1, 1179677, 0, 1, 1179678, 0, 1, 1179679, 0, 1, 1114144, 0, 1, 1048608, 0, 1, 1048609, 0, 1, 786455, 0, 1, 589848, 0, 1, 524312, 0, 1, 458776, 0, 1, 393240, 0, 1, 262169, 0, 1, 327705, 0, 1, 327704, 0, 1, 983074, 0, 1, 917539, 0, 1, 852004, 0, 1, 852005, 0, 1, 786470, 0, 1, 720934, 0, 1, 720935, 0, 1, 720936, 0, 1, 720937, 0, 1, 786473, 0, 1, 852009, 0, 1, 917545, 0, 1, 917544, 0, 1, 983081, 0, 1, 917547, 0, 1, 917548, 0, 1, 917549, 0, 1, 983086, 0, 1, 983087, 0, 1, 983088, 0, 1, 1048624, 0, 1, 1114161, 0, 1, 1179697, 0, 1, 1179696, 0, 1, 1179693, 0, 1, 1179692, 0, 1, 1245228, 0, 1, 1245227, 0, 1, 1048614, 0, 1, 1114150, 0, 1, 1114149, 0, 1, 1179685, 0, 1, 1245221, 0, 1, 1310758, 0, 1, 1310759, 0, 1, 1310760, 0, 1, 1310761, 0, 1, 1310762, 0, 1, 1245226, 0, 1, 983079, 0, 1, 1114162, 0, 1, 1114163, 0, 1, 1114164, 0, 1, 1048628, 0, 1, 983093, 0, 1, 917557, 0, 1, 852021, 0, 1, 786485, 0, 1, 720949, 0, 1, 655413, 0, 1)
 
 [node name="Room_related" type="Node2D" parent="."]
 
