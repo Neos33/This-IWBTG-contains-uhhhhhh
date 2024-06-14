@@ -1,8 +1,10 @@
+res://Objects/Gimmicks
+res://Scripts/Gimmicks
+res://Rooms
 res://Graphics/Tiles
 res://Rooms/00_Title_and_menus
 res://Scripts/UI
 res://Objects/Neos
 res://Scripts/Neos
 res://Graphics/Sprites/Player
-res://Rooms
 res://Rooms/01_Testing_rooms

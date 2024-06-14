@@ -50,7 +50,7 @@ func _on_block_detection_body_entered(body):
 		car.visible = true
 		sprite_car.visible = false
 		hitbox.disabled = true
-		hitbox.position = Vector2(-2000, -2000)
+		hitbox.position = Vector2(-2000, -2000) # Had to move it because it detect the collision anyway even if it is disabled
 		block_detection.disabled = true
 		await(_tween.finished)
 		update_text("You won")

@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://db4qp1e3i6g0w"]
+
+[ext_resource type="Script" path="res://Scripts/Gimmicks/scrFakeBlock.gd" id="1_f86q6"]
+[ext_resource type="Texture2D" uid="uid://ce764rqb8dydy" path="res://Graphics/Tiles/tilAllTiles.png" id="2_y2cpd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0lsvu"]
+size = Vector2(32, 32)
+
+[node name="objFakeBlock" type="Node2D"]
+script = ExtResource("1_f86q6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_y2cpd")
+hframes = 4
+vframes = 4
+frame = 11
+
+[node name="Detection" type="Area2D" parent="."]
+collision_layer = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection"]
+shape = SubResource("RectangleShape2D_0lsvu")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]
+position = Vector2(1.43051e-06, 1.43051e-06)
+scale = Vector2(1.6, 1.6)
+
+[connection signal="body_entered" from="Detection" to="." method="_on_detection_body_entered"]
+[connection signal="screen_entered" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_entered"]
+[connection signal="screen_exited" from="VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

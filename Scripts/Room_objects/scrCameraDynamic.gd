@@ -18,13 +18,16 @@ extends Camera2D
 @export var stop_up_at: int = -10000000
 @export var stop_right_at: int = 10000000
 @export var stop_down_at: int = 10000000
-var focus_speed: float = 0.1
+var focus_speed: float = 0.15
 var get_xy: Vector2 = Vector2.ZERO
 
+@onready var timer = $Timer
+var camera_stick: bool = true
 
 
 func _ready():
 		
+		timer.start()
 		# Gets camera target (player object, mostly)
 		# We know from objPlayerStart that objPlayer gets created alongside
 		# this camera object, so we just check in there if it actually exists
@@ -59,7 +62,10 @@ func _physics_process(delta):
 	var weight: float = GLOBAL_GAME.frame_to_delta(focus_speed, delta)
 	if is_instance_valid(target_node):
 		get_xy = target_node.position
-		position = lerp(position, target_node.position, weight)
+		if camera_stick:
+			position = get_xy
+		else:
+			position = lerp(position, target_node.position, weight)
 	else:
 		
 		# If the player no longer exists, it gets the values of the variable
@@ -67,3 +73,7 @@ func _physics_process(delta):
 		# last position, so we continue lerping to it
 		position = lerp(position, get_xy, weight)
 	
+
+
+func _on_timer_timeout():
+	camera_stick = false

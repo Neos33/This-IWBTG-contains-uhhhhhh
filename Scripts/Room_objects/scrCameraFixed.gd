@@ -33,7 +33,7 @@ func _ready():
 	position_smoothing_speed = scrolling_speed
 	
 	# Hides the sprite
-	#$Sprite2D.visible = false
+	$Sprite2D.visible = false
 
 
 # Updates the camera target and enables position smoothing if disabled

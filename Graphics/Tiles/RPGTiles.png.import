@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ypbj0fxqn1t3"
-path="res://.godot/imported/RPG Maker MV - Dungeon.png-a3f515c1a8b1dcc78dfd3e7f63df3505.ctex"
+uid="uid://btr23klty4cj2"
+path="res://.godot/imported/RPGTiles.png-3b981cc1ad1f4c21aa13ce9f7ba23e22.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Graphics/Tiles/RPG Maker MV - Dungeon.png"
-dest_files=["res://.godot/imported/RPG Maker MV - Dungeon.png-a3f515c1a8b1dcc78dfd3e7f63df3505.ctex"]
+source_file="res://Graphics/Tiles/RPGTiles.png"
+dest_files=["res://.godot/imported/RPGTiles.png-3b981cc1ad1f4c21aa13ce9f7ba23e22.ctex"]
 
 [params]
 
