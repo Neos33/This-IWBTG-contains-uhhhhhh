@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cpa648pqh6l38"
+path="res://.godot/imported/Future Two.ogg-5888c2e68ddaded6ec0a1c99807931a0.oggvorbisstr"
+
+[deps]
+
+source_file="res://Audio/Music/Neos/Future Two.ogg"
+dest_files=["res://.godot/imported/Future Two.ogg-5888c2e68ddaded6ec0a1c99807931a0.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -21,6 +21,7 @@ script = ExtResource("1_qsn7h")
 
 [node name="objMusicPlayer" parent="." instance=ExtResource("2_y1vc4")]
 song_id = ExtResource("3_r3hyw")
+volume_music = 1.5
 
 [node name="TimeTransition" type="Timer" parent="."]
 wait_time = 2.0

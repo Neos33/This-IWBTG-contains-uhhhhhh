@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://bjvw2gfnahdw4"]
+[gd_scene load_steps=8 format=3 uid="uid://bjvw2gfnahdw4"]
 
 [ext_resource type="Script" path="res://Scripts/Neos/objLancia.gd" id="1_dwrwm"]
 [ext_resource type="Texture2D" uid="uid://ci7ntlmb1n465" path="res://Graphics/Neos/sprLanciaStratos.png" id="2_5q7h4"]
 [ext_resource type="AudioStream" uid="uid://l3bu5stvbna" path="res://Audio/Sounds/Neos/bike_crashes.wav" id="3_wg1ir"]
+[ext_resource type="AudioStream" uid="uid://phf6qa0g78yc" path="res://Audio/Music/Neos/Future Two - You Win.ogg" id="4_6nj4m"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tra4k"]
 size = Vector2(656, 144)
@@ -60,5 +61,9 @@ offset_right = -112.0
 offset_bottom = -145.0
 horizontal_alignment = 2
 vertical_alignment = 1
+
+[node name="MusicWin" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_6nj4m")
+bus = &"Music"
 
 [connection signal="body_entered" from="BlockDetection" to="." method="_on_block_detection_body_entered"]

@@ -8,6 +8,7 @@ var song_id: AudioStream = null
 
 var loop_start: float = 0.0
 var loop_end: float = 0.0
+var volume_music: float = 1.0
 
 
 # Music should keep on playing/processing even if the game is paused
@@ -19,7 +20,7 @@ func _ready():
 # is paused or not
 func _physics_process(_delta):
 	
-	volume_db = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music"))
+	volume_db = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Music")) + linear_to_db(volume_music)
 	
 	# For pausing or resuming the music. Check scrGlobalGame
 	set_stream_paused(!GLOBAL_GAME.music_is_playing)
@@ -39,7 +40,11 @@ func music_update_and_play() -> void:
 		
 		autoplay = true
 		stream = song_playing
+		volume_db = linear_to_db(volume_music)
 		play()
+		
+		print(volume_music)
+		print(volume_db)
 
 
 ## If we set a loop end position from [code]objMusicPlayer[/code], we then set

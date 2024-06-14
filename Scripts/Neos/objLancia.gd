@@ -16,6 +16,7 @@ var start_moving: bool = false
 @onready var hitbox = $Hitbox
 @onready var sfx_crash = $sfxCrash
 @onready var race_status_text = $RaceStatusText
+@onready var music_win = $MusicWin
 
 func _ready():
 	car.visible = false
@@ -53,6 +54,9 @@ func _on_block_detection_body_entered(body):
 		block_detection.disabled = true
 		await(_tween.finished)
 		update_text("You won")
+		music_win.play()
+		music_win.volume_db = linear_to_db(0.6)
+		GLOBAL_MUSIC.stop_music()
 		
 
 func update_text(label, text_position = Vector2(0, 0)):

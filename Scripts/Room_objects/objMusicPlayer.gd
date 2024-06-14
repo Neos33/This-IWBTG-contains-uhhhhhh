@@ -10,6 +10,8 @@ extends Node2D
 ## is reached. Does nothing if equal to [code]0.0[/code].
 @export var loop_end: float = 0.0
 
+@export var volume_music: float = 1.0
+
 
 func _ready():
 	$Sprite2D.visible = false
@@ -17,4 +19,5 @@ func _ready():
 	GLOBAL_MUSIC.song_id = song_id
 	GLOBAL_MUSIC.loop_start = loop_start
 	GLOBAL_MUSIC.loop_end = loop_end
+	GLOBAL_MUSIC.volume_music = volume_music
 	GLOBAL_MUSIC.music_update_and_play()

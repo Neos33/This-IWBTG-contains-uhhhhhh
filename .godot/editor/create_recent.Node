@@ -1,5 +1,7 @@
-MarginContainer
+AudioStreamPlayer
 Label
+VBoxContainer
+MarginContainer
 Control
 Node2D
 Node
@@ -11,5 +13,3 @@ CharacterBody2D
 ColorRect
 ParallaxLayer
 ParallaxBackground
-SubViewportContainer
-SubViewport

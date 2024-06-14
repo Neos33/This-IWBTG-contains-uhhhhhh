@@ -82,7 +82,7 @@ focus_neighbor_top = NodePath("../Options")
 focus_neighbor_right = NodePath(".")
 focus_neighbor_bottom = NodePath("../ExitGame")
 action_mode = 0
-_text = "Credits"
+_text = "Information"
 
 [node name="ExitGame" parent="ButtonContainer" instance=ExtResource("7_34exa")]
 layout_mode = 2

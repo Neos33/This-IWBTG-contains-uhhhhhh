@@ -48,7 +48,7 @@ func resize_camera():
 	
 	var _tween = create_tween().set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_EXPO)
 	_tween.tween_property(camera_meme, "position", _target_pos, 1.0)
-	_tween.set_parallel().tween_property(camera_meme, "zoom", Vector2(2, 2), 1.0)
+	_tween.set_parallel().tween_property(camera_meme, "zoom", Vector2(3, 3), 1.0)
 	#_tween.set_parallel().tween_property($ColorRect, "color", Color.BLACK, 1.0)
 	
 	

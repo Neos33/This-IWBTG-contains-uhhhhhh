@@ -5,14 +5,13 @@ extends Node2D
 @onready var race_countdown = $Trigger_related/RaceCountdown
 
 var lancia_won: bool = false
-var loop_position: float
 const kid_audience_offset: int = 28
 const kid_audience_total: int = 16
 var kid_lucky
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	loop_position = randf_range(20.317, 26.765)
+	# Make one of the audience be upside down
 	kid_lucky = get_node("Room_related/Audience/objPlayerAudience" + str(randi_range(1, kid_audience_total)))
 	kid_lucky.rotation = 3.15 # idk why 3.15 to rotate 180 degrees
 	kid_lucky.scale.x = -1
@@ -28,10 +27,6 @@ func _process(delta):
 			lancia_won = true
 			obj_lancia.update_text("You lose", Vector2(-64, 0))
 			
-	# Music restarting
-	if GLOBAL_MUSIC.get_playback_position() > loop_position:
-		GLOBAL_MUSIC.seek(0.0)
-		loop_position = randf_range(20.317, 26.765)
 	
 
 

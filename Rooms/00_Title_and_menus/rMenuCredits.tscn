@@ -52,12 +52,13 @@ theme_override_constants/margin_top = 8
 theme_override_constants/margin_right = 8
 theme_override_constants/margin_bottom = 8
 
-[node name="Text" type="Label" parent="Body/MarginContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Body/MarginContainer"]
+layout_mode = 2
+
+[node name="Info" type="Label" parent="Body/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Game made for Sudoku GameJam
-
-Ideas taken from Alphamaxnova1, KuruHS, Sven-Coop community, RandomChaos, Saturday legends
+text = "Ideas taken from Alphamaxnova1, KuruHS, Sven-Coop maps, RandomChaos, Saturday legends
 
 Testplay = No :(
 
@@ -68,10 +69,17 @@ Special Thanks:
  - Gaphodil: Engine
  - Racic: Being a cool guy
 
+Organizer: Poi
+Judges: Poi, Jopagu, AliceNobodi, Banstmen
 
-
-Have fun :)"
+"
 autowrap_mode = 2
+
+[node name="GameMessage" type="Label" parent="Body/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "Game made for Sudoku Jam 2024
+Have fun :)"
+horizontal_alignment = 1
 
 [node name="BottomText" type="Control" parent="."]
 anchors_preset = 0
