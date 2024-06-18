@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3]
+[gd_scene load_steps=5 format=3 uid="uid://dwnmboxyxmsw3"]
 
 [ext_resource type="Texture2D" uid="uid://dx46i1jk4hllc" path="res://Graphics/Sprites/Gimmicks/sprPhysicsBox.png" id="1_2ygja"]
 [ext_resource type="Script" path="res://Scripts/Gimmicks/scrPhysicsBox.gd" id="1_5iuux"]

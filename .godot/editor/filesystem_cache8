@@ -1,6 +1,7 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1718577611
+::res://::1718654042
 CircleSpinBackground.gd::GDScript::-1::1717459750::0::1::::<>Node2D<>::
+export_presets.cfg::TextFile::-1::1718577649::0::1::::<><>::
 README.md::TextFile::-1::1717459751::0::1::::<><>::
 ::res://addons/::1717459751
 ::res://addons/2d_shapes/::1717609676
@@ -75,7 +76,8 @@ bckPixelStarfield.png::CompressedTexture2D::7949066825716521950::1717459750::171
 ::res://Graphics/Fonts/::1717459750
 NFPixels-Regular.otf::FontFile::60645552565418258::1717459750::1717459750::1::::<><>::
 OpenSauceOne-Regular.otf::FontFile::7300000390074409602::1717459750::1717459750::1::::<><>::
-::res://Graphics/Neos/::1718235145
+::res://Graphics/Neos/::1718669143
+gta_easteregg.png::CompressedTexture2D::8846771482114124255::1718666621::1718666650::1::::<><>::
 png-clipart-yuruyuri-anime-4chan-youtube-anime-television-mammal-thumbnail.png::CompressedTexture2D::4859301140786599534::1717459751::1717459751::1::::<><>::
 sprbg_circle.png::CompressedTexture2D::6454357689556359312::1718160087::1718160130::1::::<><>::
 sprDFNeedle.png::CompressedTexture2D::1412335674173177242::1717459751::1717459751::1::::<><>::
@@ -86,6 +88,10 @@ stratos_from_side.jpg::CompressedTexture2D::6544636972218271659::1717459751::171
 sprPlayerFall.png::CompressedTexture2D::7366327313967731932::1718235077::1718235165::1::::<><>::
 sprPlayerIdle_strip4.png::CompressedTexture2D::7794017130199227953::1718235100::1718235165::1::::<><>::
 sprPlayerJump.png::CompressedTexture2D::7231734755720086608::1718234983::1718235165::1::::<><>::
+::res://Graphics/Neos/Mario/::1718670181
+Mario Warp Pipe Sound Effect.wav::AudioStreamWAV::5267659242980818376::1718670169::1718670186::1::::<><>::
+mario.png::CompressedTexture2D::1084651525634622831::1718669117::1718669151::1::::<><>::
+wiiu_pipe.png::CompressedTexture2D::4980371172817868865::1718668836::1718669151::1::::<><>::
 ::res://Graphics/Neos/Stage_Introduction/::1717459751
 Mario5MinutosSpeedrun.png::CompressedTexture2D::9190468948500672938::1717459750::1717459750::1::::<><>::
 page2ofgoogle.jpg::CompressedTexture2D::5123653956925364600::1717459751::1717459751::1::::<><>::
@@ -163,11 +169,11 @@ objSign.tscn::PackedScene::9120355342955586678::1717459751::0::1::::<><>::res://
 ::res://Objects/Dialog_system/List/::1717459751
 dialogTesting01.tscn::PackedScene::-1::1717459751::0::1::::<><>::res://Scripts/Dialog_system/scrDialogBox.gd<>uid://cgvc5dghd2jq0::::res://Graphics/Sprites/Dialog_system/sprDialogPlayer.png<>uid://ox7qqy44wanl::::res://Graphics/Sprites/Dialog_system/sprSign.png<>uid://dcaf67rc8h3nq::::res://Graphics/Fonts/OpenSauceOne-Regular.otf
 dialogTesting02.tscn::PackedScene::7327020546224902764::1717459751::0::1::::<><>::res://Scripts/Dialog_system/scrDialogBox.gd<>uid://dcaf67rc8h3nq::::res://Graphics/Fonts/OpenSauceOne-Regular.otf<>uid://cgvc5dghd2jq0::::res://Graphics/Sprites/Dialog_system/sprDialogPlayer.png
-::res://Objects/Gimmicks/::1718405109
+::res://Objects/Gimmicks/::1718582197
 objBouncyBlock.tscn::PackedScene::4671965248875005170::1717459751::0::1::::<><>::res://Scripts/Gimmicks/scrBouncyBlock.gd<>uid://dvm4yxmqjf3lu::::res://Graphics/Sprites/Gimmicks/sprBouncyBlock.png
 objCoin.tscn::PackedScene::8421454642355304086::1717459751::0::1::::<><>::uid://d0qu4k1362j4y::::res://Graphics/Sprites/Gimmicks/sprCoin.png<>res://Scripts/Gimmicks/scrCoin.gd
 objFadingBlock.tscn::PackedScene::5438654047745774578::1718404302::0::1::::<><>::res://Scripts/Gimmicks/scrFadingBlock.gd<>uid://ce6up10x0wqqg::::res://Graphics/Sprites/Gimmicks/sprFadingBlock.png
-objFakeBlock.tscn::PackedScene::7290317481448336120::1718405109::0::1::::<><>::res://Scripts/Gimmicks/scrFakeBlock.gd<>uid://ce764rqb8dydy::::res://Graphics/Tiles/tilAllTiles.png
+objFakeBlock.tscn::PackedScene::7290317481448336120::1718582197::0::1::::<><>::res://Scripts/Gimmicks/scrFakeBlock.gd<>uid://ce764rqb8dydy::::res://Graphics/Tiles/tilAllTiles.png
 objInvisibleBlock.tscn::PackedScene::3178782285849355683::1718404302::0::1::::<><>::uid://8f26yn08j41a::::res://Graphics/Sprites/Gimmicks/sprMovingBlock.png<>res://Scripts/Gimmicks/scrInvisibleBlock.gd
 objJumpRefresher.tscn::PackedScene::6194544541753943480::1717459751::0::1::::<><>::res://Scripts/Gimmicks/scrJumpRefresher.gd<>uid://chu7voxv2wc2g::::res://Graphics/Sprites/Gimmicks/sprJumpRefresher16.png<>uid://bi0d5fwmegvac::::res://Resources/Materials/matJumpRefresher.tres
 objMovingBlock.tscn::PackedScene::3559694242409656275::1717459751::0::1::::<><>::res://Scripts/Gimmicks/scrMovingBlock.gd<>uid://8f26yn08j41a::::res://Graphics/Sprites/Gimmicks/sprMovingBlock.png
@@ -188,10 +194,11 @@ objSpikeBlock.tscn::PackedScene::7389864599945073367::1717459751::0::1::::<><>::
 tilSpikes.tscn::PackedScene::7759151490726632794::1717459751::0::1::::<><>::uid://mgx6x5nn2vb8::::res://Graphics/Tilemaps/tilSpikes.png
 ::res://Objects/Hazards/Enemies/::1717459751
 objEnemyDummy.tscn::PackedScene::3422093015524416041::1717459751::0::1::::<><>::res://Scripts/Hazards/scrDummyEnemy.gd<>res://Scripts/Shaders/shHitBlink.gdshader<>uid://duaprtq8m8lgj::::res://Graphics/Sprites/Enemies/sprDummyEnemy.png
-::res://Objects/Neos/::1718379566
+::res://Objects/Neos/::1718668391
 bg_sc.tscn::PackedScene::6523086432837727124::1718321659::0::1::::<><>::uid://cx7slfl0m6ivo::::res://Graphics/Neos/sprbg_circle.png
 circle_spin_background.tscn::PackedScene::1176295844866420947::1717459751::0::1::::<><>::res://CircleSpinBackground.gd<>res://addons/2d_shapes/shapes/Ellipse.gd
 objCarBarrierWeakness.tscn::PackedScene::4473910209062426446::1718226381::0::1::::<><>::res://Scripts/Neos/CarBarrierWeak.gd<>uid://ce764rqb8dydy::::res://Graphics/Tiles/tilAllTiles.png<>uid://bes18loo3v73l::::res://Objects/Room_objects/objSaveBlocker.tscn
+objS2TrapLayout.tscn::PackedScene::8882335737624800556::1718668391::0::1::::<><>::res://Scripts/Neos/scrS2TrapLayout.gd<>uid://bm40t36a6m8sc::::res://Objects/Tiles/til32x32.tscn<>uid://blj3cyjlb8uil::::res://Objects/Gimmicks/objInvisibleBlock.tscn<>uid://ce764rqb8dydy::::res://Graphics/Tiles/tilAllTiles.png
 obj_lancia.tscn::PackedScene::3062856523002005037::1718379565::0::1::::<><>::res://Scripts/Neos/objLancia.gd<>uid://ci7ntlmb1n465::::res://Graphics/Neos/sprLanciaStratos.png<>uid://l3bu5stvbna::::res://Audio/Sounds/Neos/bike_crashes.wav<>uid://phf6qa0g78yc::::res://Audio/Music/Neos/Future Two - You Win.ogg
 obj_player_audience.tscn::PackedScene::1910702679956785252::1718321659::0::1::::<><>::res://Scripts/Neos/objPlayerAudience.gd<>uid://burygy08cq204::::res://Graphics/Sprites/Player/sprPlayerFall.png<>uid://dc7klm3gk31ye::::res://Graphics/Neos/Audience/sprPlayerFall.png
 RaceCountdown.tscn::PackedScene::2576775565797453698::1718379566::0::1::::<><>::uid://cbb6l3vo1jqjh::::res://Audio/Sounds/Neos/mthree.wav<>res://Scripts/Neos/RaceCountdown.gd<>uid://c21ih4i1dpruh::::res://Audio/Sounds/Neos/mone.wav<>uid://c6xb6ijown7ay::::res://Audio/Sounds/Neos/mtwo.wav<>uid://w1hmyd7gj0bi::::res://Audio/Sounds/Neos/mgo.wav<>uid://xqaw3ttrcuv5::::res://Audio/Sounds/Neos/Brain fart.wav<>uid://br7an7qyxeenr::::res://Audio/Sounds/Neos/Sanctuary Guardians.ogg
@@ -201,15 +208,15 @@ objBullet.tscn::PackedScene::1548822106685079173::1717459751::0::1::::<><>::res:
 objGameOver.tscn::PackedScene::2855864048997810782::1717459751::0::1::::<><>::uid://dp147qcvomaro::::res://Graphics/Sprites/Player/sprGameOver.png
 objJumpParticle.tscn::PackedScene::6077404162657375611::1717459751::0::1::::<><>::uid://r060ph0sbxx2::::res://Resources/Materials/matJumpParticle.tres<>res://Scripts/Player/scrJumpParticle.gd
 objPlayer.tscn::PackedScene::3502246003041022262::1718317877::0::1::::<><>::res://Scripts/Player/scrPlayer.gd<>uid://burygy08cq204::::res://Graphics/Sprites/Player/sprPlayerFall.png<>uid://dd3vx3fvdxdrh::::res://Graphics/Sprites/Player/sprPlayerIdle.png<>uid://dbu5de27ltlgx::::res://Graphics/Sprites/Player/sprPlayerJump.png<>uid://nc32sed5ti8l::::res://Graphics/Sprites/Player/sprPlayerRunning.png<>uid://iek6jj5sm1cc::::res://Graphics/Sprites/Player/sprPlayerSliding.png
-::res://Objects/Room_objects/::1718405109
+::res://Objects/Room_objects/::1718668391
 objCameraDynamic.tscn::PackedScene::5032602937113091319::1718404301::0::1::::<><>::res://Scripts/Room_objects/scrCameraDynamic.gd<>uid://b6wjn6wemp8tk::::res://Graphics/Sprites/Room_objects/sprCamera.png
 objCameraFixed.tscn::PackedScene::1684650934670430737::1718403383::0::1::::<><>::res://Scripts/Room_objects/scrCameraFixed.gd<>uid://b6wjn6wemp8tk::::res://Graphics/Sprites/Room_objects/sprCamera.png
 objMusicPlayer.tscn::PackedScene::4122040398844905480::1718379566::0::1::::<><>::res://Scripts/Room_objects/objMusicPlayer.gd<>uid://cikxmkd3je67u::::res://Graphics/Sprites/Room_objects/sprPlayMusic.png
-objSaveBlocker.tscn::PackedScene::2705973030887586283::1717459751::0::1::::<><>::res://Scripts/Room_objects/scrSaveBlocker.gd<>uid://caeqoedecr7xt::::res://Graphics/Sprites/Room_objects/sprSaveBlocker.png
-objSavePoint.tscn::PackedScene::4406771757324219792::1717459751::0::1::::<><>::res://Scripts/Room_objects/scrSavePoint.gd<>uid://d1jo7vo305wif::::res://Graphics/Sprites/Room_objects/sprSave.png
+objSaveBlocker.tscn::PackedScene::2705973030887586283::1718661733::0::1::::<><>::res://Scripts/Room_objects/scrSaveBlocker.gd<>uid://caeqoedecr7xt::::res://Graphics/Sprites/Room_objects/sprSaveBlocker.png
+objSavePoint.tscn::PackedScene::4406771757324219792::1718661231::0::1::::<><>::res://Scripts/Room_objects/scrSavePoint.gd<>uid://d1jo7vo305wif::::res://Graphics/Sprites/Room_objects/sprSave.png
 objSignProximity.tscn::PackedScene::6240324074390861113::1717459751::0::1::::<><>::res://Scripts/Room_objects/scrSignProximity.gd<>uid://ox7qqy44wanl::::res://Graphics/Sprites/Dialog_system/sprSign.png<>uid://4m283seugry::::res://Graphics/Fonts/NFPixels-Regular.otf
 objWarp.tscn::PackedScene::3428173150529123659::1717459751::0::1::::<><>::res://Scripts/Room_objects/scrWarp.gd<>uid://c875wnojpp2fg::::res://Graphics/Sprites/Room_objects/sprWarp.png
-objWarpNextStage.tscn::PackedScene::1814367751950716703::1718405109::0::1::::<><>::res://Scripts/Neos/objWarpNextStage.gd<>uid://c875wnojpp2fg::::res://Graphics/Sprites/Room_objects/sprWarp.png
+objWarpNextStage.tscn::PackedScene::1814367751950716703::1718668391::0::1::::<><>::res://Scripts/Neos/objWarpNextStage.gd<>uid://c875wnojpp2fg::::res://Graphics/Sprites/Room_objects/sprWarp.png
 ::res://Objects/System/::1717459751
 objHUD.tscn::PackedScene::6296306452289393963::1717459751::0::1::::<><>::res://Scripts/System/scrHUD.gd<>uid://4m283seugry::::res://Graphics/Fonts/NFPixels-Regular.otf<>uid://cs7d7k2kmj13y::::res://Graphics/Sprites/Collectables/sprSecretItem.png<>uid://dd3vx3fvdxdrh::::res://Graphics/Sprites/Player/sprPlayerIdle.png
 objSavefilePreview.tscn::PackedScene::3294672619847008337::1717459751::0::1::::<><>::uid://cjghfmo17k80l::::res://Graphics/Sprites/System/sprSaveFile.png<>res://Scripts/System/scrSavefilePreview.gd
@@ -238,23 +245,25 @@ objPauseMenuMain.tscn::PackedScene::6958970147856754318::1717459751::0::1::::<><
 ::res://Resources/Licenses/Music/::1717459751
 ::res://Resources/Licenses/SFX/::1717459751
 ::res://Resources/Licenses/Sprites/::1717459751
-::res://Resources/Materials/::1718403354
+::res://Resources/Materials/::1718660937
 matBloodEmitter.tres::ParticleProcessMaterial::591178142174561016::1717459751::0::1::::<><>::
-matJumpParticle.tres::ParticleProcessMaterial::1246747457145317133::1718403354::0::1::::<><>::
-matJumpRefresher.tres::ParticleProcessMaterial::2999776898597579206::1718403354::0::1::::<><>::
+matJumpParticle.tres::ParticleProcessMaterial::1246747457145317133::1718660937::0::1::::<><>::
+matJumpRefresher.tres::ParticleProcessMaterial::2999776898597579206::1718660937::0::1::::<><>::
 ::res://Resources/Project/::1717459751
 default_bus_layout.tres::AudioBusLayout::8030066203278267541::1717459751::0::1::::<><>::
 icon.png::CompressedTexture2D::9059171887377794089::1717459751::1717459751::1::::<><>::
 w10_text_icon.png::CompressedTexture2D::917595229463189777::1717459751::1717459751::1::::<><>::
-::res://Rooms/::1718405187
+::res://Rooms/::1718669799
 IntroLinkinPark.tscn::PackedScene::7962580312958870272::1718321659::0::1::::<><>::uid://sv7khpx6shdk::::res://Audio/Music/Neos/But it came out in 2007 template.ogg
+rNeosStage03.gd::GDScript::-1::1718667828::0::1::::<>Node2D<>::
 rNeosStage01.gd::GDScript::-1::1718320599::0::1::::<>Node2D<>::
-rNeosStage01.tscn::PackedScene::635638156132318277::1718405108::0::1::::<><>::res://Rooms/rNeosStage01.gd<>uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>uid://yab7pya0yr1j::::res://Objects/Room_objects/objCameraFixed.tscn<>uid://bm40t36a6m8sc::::res://Objects/Tiles/til32x32.tscn<>uid://bp5rqk4l7tesk::::res://Objects/Player/objPlayer.tscn<>uid://cpa648pqh6l38::::res://Audio/Music/Neos/Future Two.ogg<>uid://bcyhd8mnaxa6m::::res://Objects/Neos/RaceCountdown.tscn<>uid://035mv16jo7nf::::res://Objects/Room_objects/objWarpNextStage.tscn<>uid://da1qaif83tf17::::res://Objects/Trigger_system/objTrigger.tscn<>uid://de5ts46bva4ii::::res://Audio/Sounds/sndBouncyBlock.wav<>uid://2hs82bptqwfs::::res://Objects/Neos/obj_player_audience.tscn<>uid://b5sj3k4pn1mvu::::res://Rooms/rPenaltyFake.tscn<>uid://bjvw2gfnahdw4::::res://Objects/Neos/obj_lancia.tscn<>uid://xqaw3ttrcuv5::::res://Audio/Sounds/Neos/Brain fart.wav<>uid://b40gwarhjqfte::::res://Objects/Neos/objCarBarrierWeakness.tscn
+rNeosStage01.tscn::PackedScene::635638156132318277::1718668391::0::1::::<><>::res://Rooms/rNeosStage01.gd<>uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>uid://yab7pya0yr1j::::res://Objects/Room_objects/objCameraFixed.tscn<>uid://bm40t36a6m8sc::::res://Objects/Tiles/til32x32.tscn<>uid://bp5rqk4l7tesk::::res://Objects/Player/objPlayer.tscn<>uid://cpa648pqh6l38::::res://Audio/Music/Neos/Future Two.ogg<>uid://bcyhd8mnaxa6m::::res://Objects/Neos/RaceCountdown.tscn<>uid://035mv16jo7nf::::res://Objects/Room_objects/objWarpNextStage.tscn<>uid://da1qaif83tf17::::res://Objects/Trigger_system/objTrigger.tscn<>uid://de5ts46bva4ii::::res://Audio/Sounds/sndBouncyBlock.wav<>uid://2hs82bptqwfs::::res://Objects/Neos/obj_player_audience.tscn<>uid://b5sj3k4pn1mvu::::res://Rooms/rPenaltyFake.tscn<>uid://bjvw2gfnahdw4::::res://Objects/Neos/obj_lancia.tscn<>uid://xqaw3ttrcuv5::::res://Audio/Sounds/Neos/Brain fart.wav<>uid://b40gwarhjqfte::::res://Objects/Neos/objCarBarrierWeakness.tscn
 rNeosStage02.gd::GDScript::-1::1718226549::0::1::::<>Node2D<>::
-rNeosStage02.tscn::PackedScene::1670493727029540096::1718405187::0::1::::<><>::uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>uid://cy63jsjk6yuie::::res://Objects/Neos/bg_sc.tscn<>res://Rooms/rNeosStage02.gd<>uid://bm40t36a6m8sc::::res://Objects/Tiles/til32x32.tscn<>uid://don7bjg8r5lnh::::res://Audio/Music/Neos/royals.ogg<>uid://bp5rqk4l7tesk::::res://Objects/Player/objPlayer.tscn<>uid://cdx3h81o7hqb4::::res://Objects/Room_objects/objCameraDynamic.tscn<>uid://disuddxn6h6vm::::res://Objects/Hazards/tilSpikes.tscn<>uid://b31w5fm4w5857::::res://Objects/Room_objects/objSavePoint.tscn<>uid://db4qp1e3i6g0w::::res://Objects/Gimmicks/objFakeBlock.tscn<>uid://bqylv5tq4q10j::::res://Objects/Gimmicks/objMovingBlock.tscn<>res://Objects/Gimmicks/tilPlatformBlock.tscn<>uid://bes18loo3v73l::::res://Objects/Room_objects/objSaveBlocker.tscn
+rNeosStage02.tscn::PackedScene::1670493727029540096::1718668391::0::1::::<><>::uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>uid://cy63jsjk6yuie::::res://Objects/Neos/bg_sc.tscn<>res://Rooms/rNeosStage02.gd<>uid://bm40t36a6m8sc::::res://Objects/Tiles/til32x32.tscn<>uid://don7bjg8r5lnh::::res://Audio/Music/Neos/royals.ogg<>uid://bp5rqk4l7tesk::::res://Objects/Player/objPlayer.tscn<>uid://cdx3h81o7hqb4::::res://Objects/Room_objects/objCameraDynamic.tscn<>uid://disuddxn6h6vm::::res://Objects/Hazards/tilSpikes.tscn<>uid://b31w5fm4w5857::::res://Objects/Room_objects/objSavePoint.tscn<>uid://db4qp1e3i6g0w::::res://Objects/Gimmicks/objFakeBlock.tscn<>uid://dysw1ijx6twmu::::res://Objects/Neos/objS2TrapLayout.tscn<>uid://blj3cyjlb8uil::::res://Objects/Gimmicks/objInvisibleBlock.tscn<>uid://bqylv5tq4q10j::::res://Objects/Gimmicks/objMovingBlock.tscn<>res://Objects/Gimmicks/tilPlatformBlock.tscn<>uid://bes18loo3v73l::::res://Objects/Room_objects/objSaveBlocker.tscn<>uid://da1qaif83tf17::::res://Objects/Trigger_system/objTrigger.tscn<>uid://dybpbfbyw47vn::::res://Graphics/Neos/gta_easteregg.png<>uid://cdt6et828ao0j::::res://Audio/Sounds/sndBlockChange.wav<>uid://035mv16jo7nf::::res://Objects/Room_objects/objWarpNextStage.tscn
+rNeosStage03.tscn::PackedScene::5856687816462994342::1718669799::0::1::::<><>::uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>res://Rooms/rNeosStage03.gd<>uid://yab7pya0yr1j::::res://Objects/Room_objects/objCameraFixed.tscn<>uid://nc5enh8swv78::::res://Objects/Backgrounds/objBackgroundColor.tscn<>uid://bp5rqk4l7tesk::::res://Objects/Player/objPlayer.tscn<>uid://bm40t36a6m8sc::::res://Objects/Tiles/til32x32.tscn<>uid://ppob1kaec3x8::::res://Graphics/Neos/Mario/mario.png<>uid://cc7r8rlbk5qib::::res://Graphics/Neos/Mario/wiiu_pipe.png
 rPenaltyFake.tscn::PackedScene::4529841818304153550::1718226573::0::1::::<><>::uid://nc5enh8swv78::::res://Objects/Backgrounds/objBackgroundColor.tscn<>uid://bm40t36a6m8sc::::res://Objects/Tiles/til32x32.tscn<>res://Rooms/TrapNode.gd<>uid://cbh48kxqc56e1::::res://Graphics/Neos/png-clipart-yuruyuri-anime-4chan-youtube-anime-television-mammal-thumbnail.png<>res://addons/2d_shapes/shapes/Ellipse.gd<>uid://b4e0e0q18o0gl::::res://Audio/Music/Neos/Baka Mitai - Yakuza OST.ogg<>uid://c6hi0hsu3bg1q::::res://Audio/Music/Neos/LOVE TOGETHER.ogg
 rTemplate.tscn::PackedScene::3422134250292000537::1717459751::0::1::::<><>::uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>uid://yab7pya0yr1j::::res://Objects/Room_objects/objCameraFixed.tscn
-stage_number_loading.tscn::PackedScene::389943801293712136::1718405109::0::1::::<><>::res://Scripts/Neos/StageNumber.gd<>uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>uid://b5oqngl8w03id::::res://Audio/Music/Neos/Free Form Jazz.ogg<>uid://ce863j5w8aaua::::res://Graphics/Neos/Stage_Introduction/page2ofgoogle.jpg<>uid://sa3kgybt87gm::::res://Graphics/Neos/Stage_Introduction/stage3.jpg<>uid://d35lxbk72a28i::::res://Graphics/Neos/Stage_Introduction/Stage4_Connect4.jpeg<>uid://d366xfbvv7o3k::::res://Graphics/Neos/Stage_Introduction/Mario5MinutosSpeedrun.png<>res://addons/2d_shapes/shapes/Arrow.gd<>res://addons/2d_shapes/shapes/Ellipse.gd
+stage_number_loading.tscn::PackedScene::389943801293712136::1718668391::0::1::::<><>::res://Scripts/Neos/StageNumber.gd<>uid://byy0nyaw6gtki::::res://Objects/Room_objects/objMusicPlayer.tscn<>uid://b5oqngl8w03id::::res://Audio/Music/Neos/Free Form Jazz.ogg<>uid://ce863j5w8aaua::::res://Graphics/Neos/Stage_Introduction/page2ofgoogle.jpg<>uid://sa3kgybt87gm::::res://Graphics/Neos/Stage_Introduction/stage3.jpg<>uid://d35lxbk72a28i::::res://Graphics/Neos/Stage_Introduction/Stage4_Connect4.jpeg<>uid://d366xfbvv7o3k::::res://Graphics/Neos/Stage_Introduction/Mario5MinutosSpeedrun.png<>res://addons/2d_shapes/shapes/Arrow.gd<>res://addons/2d_shapes/shapes/Ellipse.gd
 TrapNode.gd::GDScript::-1::1717459751::0::1::::<>Node2D<>::
 ::res://Rooms/00_Title_and_menus/::1718317878
 rMenuControls.tscn::PackedScene::2503077959515939384::1717620589::0::1::::<><>::res://Scripts/UI/scrMenuControls.gd<>uid://dihcyhsflfr2g::::res://Objects/Backgrounds/Specific_backgrounds/objBackgroundMenus.tscn<>uid://wr3v4lkgftxk::::res://Objects/Tiles/til16x16.tscn<>uid://di6lx46u7ifa6::::res://Audio/Music/Neos/Asphat Urban GT 2 JAVA Mobile OST - Menu.ogg<>uid://cb8vjlr6lfill::::res://Objects/UI/objMenuButtonControls.tscn<>uid://614aveijpptq::::res://Objects/UI/objMenuButton.tscn
@@ -290,12 +299,12 @@ scrMovingBlock.gd::GDScript::-1::1717459751::0::1::::<>AnimatableBody2D<>::
 scrMovingPlatform.gd::GDScript::-1::1717459751::0::1::::<>AnimatableBody2D<>::
 scrPhysicsBox.gd::GDScript::-1::1717459751::0::1::::<>RigidBody2D<>::
 scrSheepBlocks.gd::GDScript::-1::1717459751::0::1::::<>TileMap<>::
-::res://Scripts/Globals/::1718321973
+::res://Scripts/Globals/::1718661508
 scrGlobalClass.gd::GDScript::-1::1717459751::0::1::::GlobalClass<>RefCounted<>::
 scrGlobalFunctions.gd::GDScript::-1::1717459751::0::1::::<>Node<>::
 scrGlobalGame.gd::GDScript::-1::1718299664::0::1::::<>Node<>::
 scrGlobalInstances.gd::GDScript::-1::1717459751::0::1::::<>Node<>::
-scrGlobalMusicPlayer.gd::GDScript::-1::1718321973::0::1::::<>AudioStreamPlayer<>::
+scrGlobalMusicPlayer.gd::GDScript::-1::1718661508::0::1::::<>AudioStreamPlayer<>::
 scrGlobalParticles.gd::GDScript::-1::1717459751::0::1::::<>CanvasLayer<>::
 scrGlobalSaveload.gd::GDScript::-1::1717459751::0::1::::<>Node<>::
 scrGlobalSettings.gd::GDScript::-1::1717459751::0::1::::<>Node<>::
@@ -307,24 +316,25 @@ scrJumpSwitchSpike.gd::GDScript::-1::1717459751::0::1::::<>AnimatableBody2D<>::
 scrLaserDynamic.gd::GDScript::-1::1717459751::0::1::::<>Node2D<>::
 scrLaserStatic.gd::GDScript::-1::1717459751::0::1::::<>Node2D<>::
 scrSpikeBlock.gd::GDScript::-1::1717459751::0::1::::<>StaticBody2D<>::
-::res://Scripts/Neos/::1718381025
+::res://Scripts/Neos/::1718583236
 CarBarrierWeak.gd::GDScript::-1::1718318694::0::1::::<>Node2D<>::
 objLancia.gd::GDScript::-1::1718381025::0::1::::<>CharacterBody2D<>::
 objPlayerAudience.gd::GDScript::-1::1718245562::0::1::::<>Node2D<>::
 objWarpNextStage.gd::GDScript::-1::1717459751::0::1::::<>Node2D<>::
 RaceCountdown.gd::GDScript::-1::1718318009::0::1::::<>Control<>::
+scrS2TrapLayout.gd::GDScript::-1::1718583236::0::1::::<>Node2D<>::
 StageNumber.gd::GDScript::-1::1717459751::0::1::::<>Control<>::
 ::res://Scripts/Player/::1717459751
 scrBloodEmitter.gd::GDScript::-1::1717459751::0::1::::<>GPUParticles2D<>::
 scrBullet.gd::GDScript::-1::1717459751::0::1::::<>AnimatableBody2D<>::
 scrJumpParticle.gd::GDScript::-1::1717459751::0::1::::<>GPUParticles2D<>::
 scrPlayer.gd::GDScript::-1::1717459751::0::1::::Player<>CharacterBody2D<>::
-::res://Scripts/Room_objects/::1718405187
+::res://Scripts/Room_objects/::1718661733
 objMusicPlayer.gd::GDScript::-1::1718321018::0::1::::<>Node2D<>::
 scrCameraDynamic.gd::GDScript::-1::1718405187::0::1::::<>Camera2D<>::
 scrCameraFixed.gd::GDScript::-1::1718403383::0::1::::<>Camera2D<>::
-scrSaveBlocker.gd::GDScript::-1::1717459751::0::1::::<>StaticBody2D<>::
-scrSavePoint.gd::GDScript::-1::1717459751::0::1::::<>Node2D<>::
+scrSaveBlocker.gd::GDScript::-1::1718661733::0::1::::<>StaticBody2D<>::
+scrSavePoint.gd::GDScript::-1::1718661231::0::1::::<>Node2D<>::
 scrSignProximity.gd::GDScript::-1::1717459751::0::1::::<>Area2D<>::
 scrWarp.gd::GDScript::-1::1717459751::0::1::::<>Node2D<>::
 ::res://Scripts/Shaders/::1717459751

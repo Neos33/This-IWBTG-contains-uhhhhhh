@@ -43,8 +43,8 @@ func music_update_and_play() -> void:
 		volume_db = linear_to_db(volume_music)
 		play()
 		
-		print(volume_music)
-		print(volume_db)
+		#print(volume_music)
+		#print(volume_db)
 
 
 ## If we set a loop end position from [code]objMusicPlayer[/code], we then set

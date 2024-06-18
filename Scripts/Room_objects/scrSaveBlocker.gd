@@ -27,6 +27,7 @@ func _physics_process(delta):
 # Method called from bullets/attacks
 func react_to_hit(_attack_type, _attack_damage):
 	if (activate_visual == false):
+		return # Cancel all the flashy and sfx stuff
 		sprite_alpha = 1
 		GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndSaveBlocker)
 		activate_visual = true
