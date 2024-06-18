@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://gvjhuw8vrvhw"]
+
+[ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_2ollo"]
+[ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="2_mctl3"]
+[ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="2_uriqs"]
+[ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="3_4aed0"]
+
+[node name="rTemplate" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_2ollo")]
+position = Vector2(-16, 16)
+
+[node name="til32x32" parent="Environment" instance=ExtResource("2_mctl3")]
+layer_0/tile_data = PackedInt32Array(393216, 0, 3, 393217, 0, 2, 393218, 65536, 3, 393219, 65536, 2, 393220, 65536, 3, 393221, 65536, 2, 393222, 0, 2, 393223, 65536, 3, 393224, 65536, 2, 393225, 65536, 2, 393226, 0, 3, 393227, 0, 3, 393228, 0, 3, 393229, 0, 2, 393230, 0, 3, 393231, 65536, 3)
+
+[node name="Room_related" type="Node2D" parent="."]
+
+[node name="objPlayer" parent="Room_related" instance=ExtResource("3_4aed0")]
+
+[node name="objCameraFixed" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("2_uriqs")]
+position = Vector2(-16, 48)
+target_node = NodePath("../objPlayer")
+
+[node name="Gimmicks" type="Node2D" parent="."]
+
+[node name="Hazards" type="Node2D" parent="."]
+
+[node name="Trigger_related" type="Node2D" parent="."]

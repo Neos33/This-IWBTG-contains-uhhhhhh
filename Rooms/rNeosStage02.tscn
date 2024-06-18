@@ -129,6 +129,9 @@ position = Vector2(3256, 2608)
 [node name="objSaveBlocker4" parent="Room_related/Saves" instance=ExtResource("12_ctfcm")]
 position = Vector2(3464, 2608)
 
+[node name="objSavePoint6" parent="Room_related/Saves" instance=ExtResource("7_gntyo")]
+position = Vector2(8, 336)
+
 [node name="MovingBlocks" type="Node2D" parent="Room_related"]
 
 [node name="platformBlockTilemap" parent="Room_related/MovingBlocks" instance=ExtResource("11_gj67g")]

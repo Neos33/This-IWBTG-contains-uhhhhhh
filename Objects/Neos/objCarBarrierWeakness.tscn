@@ -23,3 +23,4 @@ region_rect = Rect2(32, 96, 32, 32)
 [node name="objSaveBlocker" parent="." instance=ExtResource("3_os2sm")]
 position = Vector2(24, 128)
 scale = Vector2(1, 4.6)
+collision_layer = 2048
