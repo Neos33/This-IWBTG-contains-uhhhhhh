@@ -215,7 +215,7 @@ metadata/_edit_lock_ = true
 z_index = -102
 offset_right = 800.0
 offset_bottom = 608.0
-color = Color(0, 0, 0, 1)
+color = Color(0.0755101, 0.0755101, 0.0755101, 1)
 metadata/_edit_lock_ = true
 
 [node name="til32x32" parent="Visuals" instance=ExtResource("3_u2wbq")]

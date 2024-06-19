@@ -10,7 +10,7 @@ config_version=5
 
 [application]
 
-config/name="Sudoku Jam Game"
+config/name="This IWBTG contains uhhhhh"
 config/tags=PackedStringArray("fangame_dev")
 run/main_scene="res://Rooms/00_Title_and_menus/rTitle.tscn"
 config/features=PackedStringArray("4.2", "Mobile")
