@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://fs5k17q5nqaa"]
+[gd_scene load_steps=15 format=3 uid="uid://fs5k17q5nqaa"]
 
 [ext_resource type="Script" path="res://Scripts/Neos/StageNumber.gd" id="1_qsn7h"]
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="2_y1vc4"]
@@ -9,6 +9,11 @@
 [ext_resource type="Texture2D" uid="uid://d366xfbvv7o3k" path="res://Graphics/Neos/Stage_Introduction/Mario5MinutosSpeedrun.png" id="4_vkun3"]
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Arrow.gd" id="5_kyrls"]
 [ext_resource type="Script" path="res://addons/2d_shapes/shapes/Ellipse.gd" id="6_jw6q0"]
+[ext_resource type="Texture2D" uid="uid://cprhnrh5gfp2p" path="res://Graphics/Neos/FA_what.png" id="10_53tmg"]
+[ext_resource type="Texture2D" uid="uid://dj3d5l66fb42w" path="res://Graphics/Neos/next.png" id="10_l2o0o"]
+[ext_resource type="Texture2D" uid="uid://ci3t8gyu5g6om" path="res://Graphics/Neos/two_sides.png" id="11_b2h2m"]
+[ext_resource type="Texture2D" uid="uid://dfpwwxvd5x8vt" path="res://Graphics/Neos/excel.png" id="12_48p7e"]
+[ext_resource type="Texture2D" uid="uid://cl4oefhphy22m" path="res://Graphics/Neos/realmadrid.png" id="13_s33yp"]
 
 [node name="StageNumber" type="Control"]
 layout_mode = 3
@@ -28,6 +33,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="Stage1" type="Control" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -267,5 +273,89 @@ style = 1
 outline_width = 2
 fill_color = Color(1, 0, 0, 1)
 outline_color = Color(1, 0, 0, 1)
+
+[node name="Stage6" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Stage6"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage6"]
+position = Vector2(395, 299)
+scale = Vector2(4.25, 2.73973)
+texture = ExtResource("10_l2o0o")
+
+[node name="Stage7" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Stage7"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Node2D" type="Node2D" parent="Stage7"]
+scale = Vector2(3.48, 2.76)
+metadata/_edit_group_ = true
+
+[node name="TwoSides" type="Sprite2D" parent="Stage7/Node2D"]
+position = Vector2(116, 110)
+texture = ExtResource("11_b2h2m")
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage7/Node2D"]
+position = Vector2(175, 125)
+scale = Vector2(1, 0.7125)
+texture = ExtResource("12_48p7e")
+region_enabled = true
+region_rect = Rect2(8, 8, 88, 240)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Stage7/Node2D"]
+position = Vector2(47, 114)
+texture = ExtResource("13_s33yp")
+region_enabled = true
+region_rect = Rect2(0, 30, 140, 132)
+
+[node name="Stage8" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="Stage8"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Stage8"]
+position = Vector2(398.25, 265)
+scale = Vector2(1.0676, 1.22685)
+texture = ExtResource("10_53tmg")
 
 [connection signal="timeout" from="TimeTransition" to="." method="_on_time_transition_timeout"]

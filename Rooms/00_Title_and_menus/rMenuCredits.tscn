@@ -58,16 +58,15 @@ layout_mode = 2
 [node name="Info" type="Label" parent="Body/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "Ideas taken from Alphamaxnova1, KuruHS, Sven-Coop maps, RandomChaos, Saturday legends
+text = "The game is a quite short.  IWPO doesn't work here
 
-Testplay = No :(
-
-Music: Mega Man, Sega Rally 2, Vigilante 8 2nd Offense
+Ideas taken from Alphamaxnova1, KuruHS, Sven-Coop maps, RandomChaos, Saturday legends
 
 Special Thanks: 
  - Reloaded-K: Engine
  - Gaphodil: Engine
  - Racic: Being a cool guy
+ - Google: Images
 
 Organizer: Poi
 Judges: Poi, Jopagu, AliceNobodi, Banstmen

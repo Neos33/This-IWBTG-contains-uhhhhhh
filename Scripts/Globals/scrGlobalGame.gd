@@ -55,6 +55,7 @@ var warp_to_point: Vector2 = Vector2.ZERO
 
 # Custom variables
 var S3_text_twice_if_we_skip: bool = false
+var autosave_after_transition: bool = false
 
 
 """

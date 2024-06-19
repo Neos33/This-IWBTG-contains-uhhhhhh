@@ -1,0 +1,68 @@
+[gd_scene load_steps=7 format=3 uid="uid://ddvlpmpsbemgu"]
+
+[ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_knimr"]
+[ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="2_4xoc0"]
+[ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="3_tvv2p"]
+[ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="4_g856i"]
+[ext_resource type="PackedScene" uid="uid://035mv16jo7nf" path="res://Objects/Room_objects/objWarpNextStage.tscn" id="5_365ie"]
+[ext_resource type="PackedScene" uid="uid://b31w5fm4w5857" path="res://Objects/Room_objects/objSavePoint.tscn" id="6_38s7v"]
+
+[node name="rNeosStage05" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_knimr")]
+position = Vector2(-16, 16)
+
+[node name="til32x32" parent="Environment" instance=ExtResource("2_4xoc0")]
+layer_0/tile_data = PackedInt32Array(1179672, 65536, 3, 1114136, 0, 0, 1048600, 65536, 3, 983064, 131072, 3, 917528, 131072, 0, 851992, 0, 0, 786456, 0, 3, 720920, 131072, 0, 655384, 0, 2, 589848, 131072, 1, 524312, 0, 2, 458776, 131072, 2, 393240, 196608, 3, 327704, 0, 1, 262168, 131072, 0, 196632, 65536, 3, 131096, 0, 0, 65560, 65536, 3, 24, 0, 2, 23, 196608, 3, 22, 65536, 0, 21, 196608, 0, 20, 65536, 0, 19, 131072, 3, 18, 196608, 1, 17, 0, 2, 16, 65536, 3, 15, 0, 2, 14, 65536, 2, 13, 0, 2, 12, 131072, 0, 65548, 0, 3, 65547, 0, 0, 65546, 65536, 1, 65545, 65536, 2, 65544, 131072, 1, 65543, 131072, 3, 65542, 196608, 0, 65541, 65536, 2, 65540, 0, 2, 65539, 65536, 2, 65538, 65536, 3, 2, 196608, 1, 1, 196608, 0, 0, 0, 2, 65536, 0, 3, 131072, 0, 0, 196608, 65536, 2, 262144, 65536, 3, 327680, 131072, 0, 393216, 0, 2, 458752, 0, 1, 524288, 65536, 1, 589824, 0, 0, 655360, 131072, 0, 720896, 196608, 3, 786432, 0, 0, 851968, 196608, 0, 917504, 65536, 3, 983040, 0, 0, 1048576, 0, 3, 1114112, 65536, 3, 1179648, 65536, 1, 1179649, 65536, 0, 1179650, 0, 1, 1179651, 196608, 0, 1179652, 65536, 1, 1179653, 196608, 3, 1179654, 196608, 1, 1179655, 196608, 1, 1179656, 131072, 3, 1179657, 65536, 3, 1179658, 0, 2, 1179659, 65536, 3, 1179660, 0, 3, 1179661, 131072, 2, 1179662, 0, 1, 1179663, 131072, 3, 1179664, 0, 2, 1179665, 65536, 0, 1179666, 131072, 2, 1179667, 196608, 0, 1179668, 65536, 3, 1179669, 0, 2, 1179670, 131072, 3, 1179671, 65536, 0)
+
+[node name="Label" type="Label" parent="Environment"]
+offset_left = 216.0
+offset_top = 128.0
+offset_right = 579.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 40
+text = "Thanks for playing!
+any%
+99.9%
+99.999999%
+100% Real EX what Clear GG!1"
+horizontal_alignment = 1
+
+[node name="Room_related" type="Node2D" parent="."]
+
+[node name="objPlayer" parent="Room_related" instance=ExtResource("3_tvv2p")]
+position = Vector2(384.105, 484.391)
+
+[node name="objCameraFixed" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("4_g856i")]
+position = Vector2(-16, 48)
+target_node = NodePath("../objPlayer")
+
+[node name="objWarpNextStage" parent="Room_related" instance=ExtResource("5_365ie")]
+position = Vector2(856, 552)
+
+[node name="Label" type="Label" parent="Room_related/objWarpNextStage"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 45.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "what"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="objSavePoint" parent="Room_related" instance=ExtResource("6_38s7v")]
+position = Vector2(400, 560)
+
+[node name="Gimmicks" type="Node2D" parent="."]
+
+[node name="Hazards" type="Node2D" parent="."]
+
+[node name="Trigger_related" type="Node2D" parent="."]

@@ -27,6 +27,7 @@ func _physics_process(_delta):
 	if (is_warping == true):
 		GLOBAL_GAME.next_room_transition = warp_to
 		GLOBAL_GAME.next_room_transition_number = next_stage_number - 1
+		GLOBAL_GAME.autosave_after_transition = true
 		get_tree().change_scene_to_file("res://Rooms/stage_number_loading.tscn")
 
 

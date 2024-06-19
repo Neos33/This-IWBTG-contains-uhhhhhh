@@ -1,24 +1,66 @@
-[gd_scene load_steps=9 format=3 uid="uid://gvjhuw8vrvhw"]
+[gd_scene load_steps=18 format=3 uid="uid://gvjhuw8vrvhw"]
 
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_2ollo"]
 [ext_resource type="Script" path="res://Rooms/rNeosStage04.gd" id="1_iryfx"]
 [ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="2_mctl3"]
 [ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="3_4aed0"]
+[ext_resource type="AudioStream" uid="uid://cuddjq1u2etr2" path="res://Audio/Music/Neos/track01.mp3" id="3_b0fqs"]
+[ext_resource type="PackedScene" uid="uid://disuddxn6h6vm" path="res://Objects/Hazards/tilSpikes.tscn" id="4_qek6i"]
 [ext_resource type="PackedScene" uid="uid://cdx3h81o7hqb4" path="res://Objects/Room_objects/objCameraDynamic.tscn" id="5_icey0"]
 [ext_resource type="Texture2D" uid="uid://cg5dhwu33tdg0" path="res://Graphics/Neos/sprHelicopter.png" id="5_uhuid"]
 [ext_resource type="Texture2D" uid="uid://burygy08cq204" path="res://Graphics/Sprites/Player/sprPlayerFall.png" id="6_0ftd6"]
-[ext_resource type="PackedScene" uid="uid://bqylv5tq4q10j" path="res://Objects/Gimmicks/objMovingBlock.tscn" id="6_skses"]
+[ext_resource type="PackedScene" uid="uid://dvh5p5m0s4ju3" path="res://Objects/Collectables/objCollectableItem.tscn" id="6_3g1m7"]
+[ext_resource type="PackedScene" uid="uid://nc5enh8swv78" path="res://Objects/Backgrounds/objBackgroundColor.tscn" id="7_bksbm"]
+[ext_resource type="PackedScene" uid="uid://qjwd20it42a6" path="res://Objects/Gimmicks/objMovingBlock2.tscn" id="8_qnukb"]
+[ext_resource type="PackedScene" uid="uid://b31w5fm4w5857" path="res://Objects/Room_objects/objSavePoint.tscn" id="9_64kak"]
+[ext_resource type="PackedScene" uid="uid://035mv16jo7nf" path="res://Objects/Room_objects/objWarpNextStage.tscn" id="14_uc0be"]
+[ext_resource type="Texture2D" uid="uid://m8ekyq2d3dxc" path="res://Graphics/Neos/facepalm_homer.png" id="15_chi3b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ue3x0"]
+size = Vector2(12, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j34p8"]
+size = Vector2(12, 20)
 
 [node name="rLevel4" type="Node2D"]
 script = ExtResource("1_iryfx")
 
 [node name="Environment" type="Node2D" parent="."]
 
+[node name="CanvasLayer" type="CanvasLayer" parent="Environment"]
+layer = -4
+
+[node name="objBackgroundColor" parent="Environment/CanvasLayer" instance=ExtResource("7_bksbm")]
+offset_right = 800.0
+offset_bottom = 608.0
+color = Color(0.419781, 0.874387, 0.971398, 1)
+
 [node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_2ollo")]
 position = Vector2(-16, 16)
+song_id = ExtResource("3_b0fqs")
 
 [node name="til32x32" parent="Environment" instance=ExtResource("2_mctl3")]
-layer_0/tile_data = PackedInt32Array(393216, 0, 3, 393217, 0, 2, 393218, 65536, 3, 393219, 65536, 2, 393220, 65536, 3, 393221, 65536, 2, 393222, 0, 2, 393223, 65536, 3, 393224, 65536, 2, 393225, 65536, 2, 393226, 0, 3, 393227, 0, 3, 393228, 0, 3, 393229, 0, 2, 393230, 0, 3, 393231, 65536, 3)
+
+[node name="tilSpikes" parent="Environment" instance=ExtResource("4_qek6i")]
+layer_0/tile_data = PackedInt32Array(786446, 65536, 0, 786447, 65536, 0, 720911, 0, 0, 655375, 65536, 0, 589839, 65536, 0, 589840, 0, 0, 524304, 65536, 0, 589841, 65536, 0, 655378, 65536, 0, 720914, 0, 0, 786451, 65536, 0, 786453, 65536, 0, 393234, 0, 0, 393235, 65536, 0, 393236, 65536, 0, 393237, 65536, 0, 458774, 65536, 0, 458775, 65536, 0, 458776, 65536, 0, 458777, 65536, 0, 524313, 0, 0, 589849, 65536, 0, 589848, 65536, 0, 655385, 0, 0, 655386, 0, 0, 655387, 0, 0, 589852, 65536, 0, 786463, 65536, 0, 786464, 65536, 0, 786465, 65536, 0, 786470, 65536, 0, 720935, 65536, 0, 720936, 65536, 0, 655401, 65536, 0, 655402, 65536, 0, 786462, 65536, 0, 786461, 65536, 0, 786460, 65536, 0, 786459, 65536, 0, 786458, 65536, 0, 786457, 65536, 0, 786456, 65536, 0, 786455, 65536, 0, 786454, 65536, 0, 786452, 65536, 0, 786450, 65536, 0, 786449, 65536, 0, 786448, 65536, 0, 786466, 65536, 0, 786467, 65536, 0, 786468, 65536, 0, 786469, 65536, 0, 786471, 65536, 0, 786472, 65536, 0, 786473, 65536, 0, 786474, 65536, 0, 786475, 65536, 0, 786496, 65536, 0, 720960, 65536, 0, 655424, 65536, 0, 589888, 65536, 0, 524352, 65536, 0, 458816, 65536, 0, 393280, 65536, 0, 524312, 0, 0, 524311, 0, 0, 524310, 0, 0, 458773, 0, 0, 458772, 0, 0, 458771, 0, 0, 327698, 65536, 0, 720937, 0, 0, 720938, 0, 0, 589856, 65536, 0, 393248, 65536, 0, 589857, 65536, 0, 589858, 65536, 0, 393249, 65536, 0, 393250, 65536, 0, 589861, 65536, 0, 589860, 65536, 0, 589859, 65536, 0, 393251, 65536, 0, 393252, 65536, 0, 393253, 65536, 0, 589862, 65536, 0, 589863, 65536, 0, 655399, 65536, 0, 393254, 65536, 0, 458842, 65536, 0, 327770, 65536, 0, 589914, 65536, 0, 720986, 65536, 0, 524392, 65536, 0, 524393, 65536, 0, 524394, 65536, 0, 524395, 65536, 0, 524396, 65536, 0, 721006, 65536, 0, 655471, 65536, 0, 327790, 65536, 0, 393327, 65536, 0, 393328, 65536, 0, 327793, 65536, 0, 655472, 65536, 0, 589937, 65536, 0, 327794, 65536, 0, 327795, 65536, 0, 589938, 65536, 0, 589939, 65536, 0, 589940, 65536, 0, 589941, 65536, 0, 589942, 65536, 0, 589943, 65536, 0, 589944, 65536, 0, 327796, 65536, 0, 327797, 65536, 0, 327798, 65536, 0, 327799, 65536, 0, 327800, 65536, 0, 589945, 65536, 0, 524410, 65536, 0, 458875, 65536, 0, 458876, 65536, 0, 458877, 65536, 0, 458878, 65536, 0, 458879, 65536, 0, 327807, 65536, 0, 393343, 65536, 0, 524415, 65536, 0, 589951, 65536, 0, 655487, 65536, 0, 721023, 65536, 0, 262303, 0, 1, -65345, 0, 1, 191, 0, 1, 65727, 0, 1, 131263, 0, 1, 196799, 0, 1, 262335, 0, 1, 327871, 0, 1, 393407, 0, 1, 458943, 0, 1, 524479, 0, 1, 590015, 0, 1, 655551, 0, 1, 721087, 0, 1, 786623, 0, 1, 852159, 0, 1, -196417, 0, 1, -130881, 0, 1, 393300, 65536, 0, 524372, 65536, 0, 655444, 65536, 0, 393312, 65536, 0, 524384, 65536, 0, 655456, 65536, 0, 327812, 65536, 0, 393348, 65536, 0, 458884, 65536, 0, 524420, 65536, 0, 589956, 65536, 0, 655492, 65536, 0, 721028, 65536, 0, 327817, 65536, 0, 393353, 65536, 0, 458889, 65536, 0, 524425, 65536, 0, 589961, 65536, 0, 655497, 65536, 0, 721033, 65536, 0, 327822, 65536, 0, 327823, 65536, 0, 393359, 65536, 0, 458895, 65536, 0, 524431, 65536, 0, 655503, 65536, 0, 721039, 65536, 0, 655502, 65536, 0, 589966, 65536, 0, 524430, 65536, 0, 458894, 65536, 0, 393358, 65536, 0, 721038, 65536, 0, 589850, 65536, 0, 589851, 65536, 0)
+
+[node name="objCollectableItem" parent="Environment" instance=ExtResource("6_3g1m7")]
+position = Vector2(1513, 418)
+item_name = "Impossible item"
+
+[node name="Label" type="Label" parent="Environment"]
+offset_left = 2392.0
+offset_top = 216.0
+offset_right = 2433.0
+offset_bottom = 239.0
+text = "Jump"
+
+[node name="ColorRect" type="ColorRect" parent="Environment"]
+offset_left = 8.0
+offset_top = 448.0
+offset_right = 6280.0
+offset_bottom = 904.0
+color = Color(0, 0, 0, 1)
 
 [node name="Room_related" type="Node2D" parent="."]
 
@@ -37,13 +79,27 @@ default_color = Color(0, 0, 0, 1)
 position = Vector2(-36, 0)
 texture = ExtResource("5_uhuid")
 
-[node name="PlayerOffset" type="Node2D" parent="Room_related/objPlayer/Pivot"]
+[node name="PlayerOffset" type="CharacterBody2D" parent="Room_related/objPlayer/Pivot" groups=["Player"]]
 position = Vector2(0, 608)
+collision_mask = 0
+slide_on_ceiling = false
 
 [node name="Sprite2D" type="Sprite2D" parent="Room_related/objPlayer/Pivot/PlayerOffset"]
 texture = ExtResource("6_0ftd6")
 flip_v = true
 hframes = 2
+
+[node name="Mask" type="CollisionShape2D" parent="Room_related/objPlayer/Pivot/PlayerOffset"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_ue3x0")
+
+[node name="KillerDetect" type="Area2D" parent="Room_related/objPlayer/Pivot/PlayerOffset"]
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Room_related/objPlayer/Pivot/PlayerOffset/KillerDetect"]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_j34p8")
 
 [node name="Dummy" type="Node2D" parent="Room_related"]
 
@@ -51,18 +107,32 @@ hframes = 2
 offset = Vector2(0, 608)
 target_node = NodePath("../objPlayer")
 stop_up_at = 0
+stop_down_at = 0
 
-[node name="objMovingBlock" parent="Room_related" instance=ExtResource("6_skses")]
+[node name="objMovingBlock" parent="Room_related" instance=ExtResource("8_qnukb")]
 position = Vector2(248, 176)
-scale = Vector2(7.32, 1)
-move_speed = Vector2(1, 0)
+move_speed = Vector2(2, 0)
 
-[node name="objMovingBlock" parent="Room_related/objMovingBlock" instance=ExtResource("6_skses")]
-position = Vector2(-14.663, -86.2449)
-scale = Vector2(0.0983608, 4.4)
+[node name="til32x32" parent="Room_related/objMovingBlock" instance=ExtResource("2_mctl3")]
+position = Vector2(-16, 0)
+layer_0/tile_data = PackedInt32Array(-65535, 0, 2, -1, 0, 2, -65537, 0, 2, -131073, 0, 2, -196609, 0, 2, -262145, 0, 2, -327681, 0, 2, -131071, 0, 2, -196607, 0, 2, -262143, 0, 2, -327679, 0, 2, -393215, 0, 2, -458751, 0, 2, -458752, 0, 2, -393217, 0, 2)
+
+[node name="objSavePoint" parent="Room_related" instance=ExtResource("9_64kak")]
+position = Vector2(-73.688, 114.294)
+
+[node name="objWarpNextStage" parent="Room_related" instance=ExtResource("14_uc0be")]
+position = Vector2(5624, 144)
+warp_to = "res://Rooms/rNeosStage05.tscn"
+next_stage_number = 5
+
+[node name="Sprite2D" type="Sprite2D" parent="Room_related"]
+position = Vector2(6256, 248)
+texture = ExtResource("15_chi3b")
 
 [node name="Gimmicks" type="Node2D" parent="."]
 
 [node name="Hazards" type="Node2D" parent="."]
 
 [node name="Trigger_related" type="Node2D" parent="."]
+
+[connection signal="body_entered" from="Room_related/objPlayer/Pivot/PlayerOffset/KillerDetect" to="." method="_on_killer_detect_body_entered"]

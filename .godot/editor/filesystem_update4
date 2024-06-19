@@ -1,14 +1,3 @@
 res://Rooms/rNeosStage04.tscn
 res://Resources/Materials/matJumpParticle.tres
-res://Resources/Materials/matJumpRefresher.tres
-res://Rooms/rNeosStage01.tscn
-res://Rooms/rNeosStage02.tscn
-res://Objects/Room_objects/objWarpNextStage.tscn
-res://Rooms/stage_number_loading.tscn
-res://Rooms/rNeosStage03.tscn
-res://Rooms/01_Testing_rooms/rRoomSelection.tscn
-res://Objects/Neos/objCarBarrierWeakness.tscn
-res://Rooms/rNeosStage04.gd
-res://Rooms/00_Title_and_menus/rMenuFiles.tscn
-res://Rooms/00_Title_and_menus/rMenuMain.tscn
-res://Objects/Gimmicks/objMovingBlock.tscn
+res://Rooms/00_Title_and_menus/rTitle.tscn

@@ -27,6 +27,11 @@ func _process(delta):
 	if GLOBAL_GAME.triggered_events.has(1) and !triggered:
 		triggered = true
 		GLOBAL_GAME.S3_text_twice_if_we_skip = true
+		
+	if GLOBAL_GAME.autosave_after_transition:
+		GLOBAL_SAVELOAD.save_game(true)
+		GLOBAL_GAME.autosave_after_transition = false
+		print("Game saved!")
 
 
 func mario_pipe_sound():

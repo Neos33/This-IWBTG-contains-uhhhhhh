@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://qjwd20it42a6"]
+
+[ext_resource type="Script" path="res://Scripts/Gimmicks/scrMovingBlock.gd" id="1_2e1r5"]
+[ext_resource type="Texture2D" uid="uid://8f26yn08j41a" path="res://Graphics/Sprites/Gimmicks/sprMovingBlock.png" id="2_bdflh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jwaie"]
+size = Vector2(32, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2of5f"]
+size = Vector2(32, 32)
+
+[node name="objMovingBlock" type="AnimatableBody2D"]
+collision_layer = 2
+collision_mask = 64
+sync_to_physics = false
+script = ExtResource("1_2e1r5")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bdflh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_jwaie")
+
+[node name="playerDetector" type="ShapeCast2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_2of5f")
+target_position = Vector2(0, -16)
+max_results = 1

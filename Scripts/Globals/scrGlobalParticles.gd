@@ -3,14 +3,14 @@ extends CanvasLayer
 
 # This is were we preload each and every particle material
 var bloodEmitterParticle = preload("res://Resources/Materials/matBloodEmitter.tres")
-var jumpParticleParticle = preload("res://Resources/Materials/matJumpParticle.tres")
-var jumpRefresherParticle = preload("res://Resources/Materials/matJumpRefresher.tres")
+#var jumpParticleParticle = preload("res://Resources/Materials/matJumpParticle.tres")
+#var jumpRefresherParticle = preload("res://Resources/Materials/matJumpRefresher.tres")
 
 # We then add them to the particle_materials list
 var particle_materials = [
 	bloodEmitterParticle,
-	jumpParticleParticle,
-	jumpRefresherParticle
+	#jumpParticleParticle,
+	#jumpRefresherParticle
 ]
 
 # Finally, we "compile" each particle material at startup, caching them

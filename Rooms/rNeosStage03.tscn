@@ -1,9 +1,10 @@
-[gd_scene load_steps=25 format=3 uid="uid://cppa17k45xkyw"]
+[gd_scene load_steps=26 format=3 uid="uid://cppa17k45xkyw"]
 
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_6xp2a"]
 [ext_resource type="Script" path="res://Rooms/rNeosStage03.gd" id="1_u1to0"]
 [ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="2_i85l1"]
 [ext_resource type="PackedScene" uid="uid://nc5enh8swv78" path="res://Objects/Backgrounds/objBackgroundColor.tscn" id="3_aq1rn"]
+[ext_resource type="AudioStream" uid="uid://cuddjq1u2etr2" path="res://Audio/Music/Neos/track01.mp3" id="3_g44e4"]
 [ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="4_6ebyk"]
 [ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="5_qw46x"]
 [ext_resource type="PackedScene" uid="uid://bes18loo3v73l" path="res://Objects/Room_objects/objSaveBlocker.tscn" id="7_8iwgr"]
@@ -147,6 +148,7 @@ script = ExtResource("1_u1to0")
 
 [node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_6xp2a")]
 position = Vector2(-16, 16)
+song_id = ExtResource("3_g44e4")
 
 [node name="BackgroundSetup" type="Node" parent="Environment"]
 
@@ -211,6 +213,7 @@ position = Vector2(64, 176)
 layer_0/tile_data = PackedInt32Array(1179683, 0, 2, 1179684, 0, 2, 1179685, 0, 2, 1179686, 0, 2, 1179687, 0, 2, 1179688, 0, 2, 1179689, 0, 2, 1179691, 0, 2, 1179690, 0, 2, 1179682, 0, 2, 1179681, 0, 2, 1179680, 0, 2)
 
 [node name="Walls2" parent="Gimmicks" instance=ExtResource("5_qw46x")]
+visible = false
 modulate = Color(0.286275, 0.384314, 1, 1)
 layer_0/tile_data = PackedInt32Array(786431, 0, 2, 720895, 0, 2, 655359, 0, 2, 589823, 0, 2, 524287, 0, 2, 458751, 0, 2, 393215, 0, 2, 327679, 0, 2, 262143, 0, 2, 196607, 0, 2, 131071, 0, 2, 65535, 0, 2, -65536, 0, 2, -65535, 0, 2, -65534, 0, 2, -65533, 0, 2, -65532, 0, 2, 917503, 0, 2, 983039, 0, 2, 1048575, 0, 2, 1114111, 0, 2, 1179647, 0, 2, 1245183, 0, 2, -65531, 0, 2, -65530, 0, 2, -65529, 0, 2, -65528, 0, 2, -65527, 0, 2, -65526, 0, 2, -65525, 0, 2, -65524, 0, 2, -65523, 0, 2, -65522, 0, 2, -65521, 0, 2, -65520, 0, 2, -65519, 0, 2, -65518, 0, 2, -65517, 0, 2, -65516, 0, 2, -65515, 0, 2, -65514, 0, 2, -65513, 0, 2, -65512, 0, 2, 851967, 0, 2, -1, 0, 2, 720962, 0, 2, 720964, 0, 2, 655427, 0, 2, 655428, 0, 2, 1245184, 0, 2, 1245185, 0, 2, 1245186, 0, 2, 1245187, 0, 2, 1245188, 0, 2, 1245189, 0, 2, 1245190, 0, 2, 1245191, 0, 2, 1245192, 0, 2, 1245193, 0, 2, 1245194, 0, 2, 1245195, 0, 2, 1245196, 0, 2, 1245197, 0, 2, 1245198, 0, 2, 1245199, 0, 2, 1245200, 0, 2, 1245201, 0, 2, 1245202, 0, 2, 1245203, 0, 2, 1245204, 0, 2, 1245205, 0, 2, 1245206, 0, 2, 1245207, 0, 2, 1245208, 0, 2, 1114137, 0, 2, 1179673, 0, 2, 524354, 0, 2, 589890, 0, 2, 655426, 0, 2, 655429, 0, 2, 589893, 0, 2, 524357, 0, 2)
 

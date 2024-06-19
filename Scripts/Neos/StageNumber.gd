@@ -1,6 +1,6 @@
 extends Control
 
-@onready var stage_group = [$Stage1, $Stage2, $Stage3, $Stage4, $Stage5]
+@onready var stage_group = [$Stage1, $Stage2, $Stage3, $Stage4, $Stage5, $Stage6, $Stage7, $Stage8]
 @onready var time_transition = $TimeTransition
 
 var next_room: String

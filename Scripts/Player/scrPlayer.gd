@@ -246,10 +246,10 @@ func handle_jumping() -> void:
 			player_djumped.emit()
 			
 			# Jump particles on djump, as long as the player is not in water
-			if (in_water == false):
-				var jump_particle_id = jump_particle.instantiate()
-				get_parent().add_child(jump_particle_id)
-				jump_particle_id.global_position = Vector2(global_position.x, global_position.y + 12)
+			#if (in_water == false):
+			#	var jump_particle_id = jump_particle.instantiate()
+			#	get_parent().add_child(jump_particle_id)
+			#	jump_particle_id.global_position = Vector2(global_position.x, global_position.y + 12)
 	
 	# Adds some "gravity" if you release the jump button mid-jump
 	if Input.is_action_just_released("button_jump") and (velocity.y < 0):

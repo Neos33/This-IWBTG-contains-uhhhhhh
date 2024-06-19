@@ -70,8 +70,3 @@ func _physics_process(delta):
 		# If our interaction is set to stop, it should also snap perfectly
 		position = position.snapped(Vector2.ONE * GLOBAL_GAME.SNAPPING_GRID)
 
-
-# Destroys itself if it doesn't stop or bounce, and is outside of the view
-func _on_visible_on_screen_notifier_2d_screen_exited():
-	if collision_interaction == 1:
-		queue_free()

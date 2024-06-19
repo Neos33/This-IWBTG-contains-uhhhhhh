@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=3 uid="uid://c38bu3v1n5o4g"]
+
+[ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_a1pmb"]
+[ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="2_1nos3"]
+[ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="3_6mwby"]
+[ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="4_ggmax"]
+[ext_resource type="PackedScene" uid="uid://035mv16jo7nf" path="res://Objects/Room_objects/objWarpNextStage.tscn" id="5_5wg8i"]
+
+[node name="rNeosStage05" type="Node2D"]
+
+[node name="Environment" type="Node2D" parent="."]
+
+[node name="objMusicPlayer" parent="Environment" instance=ExtResource("1_a1pmb")]
+position = Vector2(-16, 16)
+
+[node name="til32x32" parent="Environment" instance=ExtResource("2_1nos3")]
+layer_0/tile_data = PackedInt32Array(1179672, 0, 0, 1114136, 0, 0, 1048600, 196608, 1, 983064, 0, 3, 917528, 196608, 3, 851992, 131072, 1, 786456, 131072, 2, 720920, 65536, 3, 655384, 65536, 2, 589848, 131072, 3, 524312, 65536, 1, 458776, 0, 3, 393240, 196608, 3, 327704, 65536, 2, 262168, 131072, 1, 196632, 0, 1, 131096, 65536, 0, 65560, 65536, 3, 24, 196608, 0, 23, 0, 2, 22, 131072, 1, 21, 196608, 1, 20, 131072, 0, 19, 131072, 2, 18, 65536, 2, 17, 65536, 0, 16, 0, 3, 15, 0, 0, 14, 0, 2, 13, 131072, 3, 12, 65536, 2, 65548, 0, 3, 65547, 0, 2, 65546, 65536, 2, 65545, 0, 2, 65544, 0, 3, 65543, 65536, 3, 65542, 0, 3, 65541, 0, 0, 65540, 196608, 3, 65539, 0, 2, 65538, 65536, 1, 2, 196608, 0, 1, 0, 3, 0, 0, 2, 65536, 65536, 1, 131072, 196608, 1, 196608, 131072, 3, 262144, 65536, 0, 327680, 0, 1, 393216, 131072, 0, 458752, 65536, 2, 524288, 65536, 2, 589824, 65536, 0, 655360, 0, 0, 720896, 65536, 0, 786432, 131072, 3, 851968, 65536, 0, 917504, 0, 2, 983040, 65536, 0, 1048576, 0, 2, 1114112, 131072, 3, 1179648, 131072, 1, 1179649, 131072, 0, 1179650, 196608, 1, 1179651, 196608, 0, 1179652, 196608, 0, 1179653, 0, 3, 1179654, 196608, 1, 1179655, 196608, 3, 1179656, 0, 3, 1179657, 65536, 2, 1179658, 0, 0, 1179659, 0, 3, 1179660, 131072, 3, 1179661, 196608, 1, 1179662, 131072, 0, 1179663, 131072, 3, 1179664, 131072, 1, 1179665, 65536, 2, 1179666, 65536, 1, 1179667, 65536, 3, 1179668, 65536, 3, 1179669, 0, 1, 1179670, 131072, 2, 1179671, 0, 0)
+
+[node name="Label" type="Label" parent="Environment"]
+offset_left = 216.0
+offset_top = 128.0
+offset_right = 579.0
+offset_bottom = 183.0
+theme_override_font_sizes/font_size = 40
+text = "Thanks for playing!
+99.9% clear"
+horizontal_alignment = 1
+
+[node name="Room_related" type="Node2D" parent="."]
+
+[node name="objPlayer" parent="Room_related" instance=ExtResource("3_6mwby")]
+position = Vector2(384.105, 484.391)
+
+[node name="objCameraFixed" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("4_ggmax")]
+position = Vector2(-16, 48)
+target_node = NodePath("../objPlayer")
+
+[node name="objWarpNextStage" parent="Room_related" instance=ExtResource("5_5wg8i")]
+position = Vector2(672, 560)
+warp_to = "res://Rooms/rNeosStage05c.tscn"
+next_stage_number = 7
+
+[node name="Label" type="Label" parent="Room_related/objWarpNextStage"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.0
+offset_top = -48.0
+offset_right = 45.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "Real EX"
+horizontal_alignment = 1
+vertical_alignment = 2
+
+[node name="Gimmicks" type="Node2D" parent="."]
+
+[node name="Hazards" type="Node2D" parent="."]
+
+[node name="Trigger_related" type="Node2D" parent="."]

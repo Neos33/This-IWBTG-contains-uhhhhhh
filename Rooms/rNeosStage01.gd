@@ -17,6 +17,10 @@ func _ready():
 	kid_lucky.scale.x = -1
 	kid_lucky.position.y -= kid_audience_offset
 	race_countdown.target_instance_zoom = kid_lucky
+	if GLOBAL_GAME.autosave_after_transition:
+		GLOBAL_SAVELOAD.save_game(true)
+		GLOBAL_GAME.autosave_after_transition = false
+		print("Game saved!")
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

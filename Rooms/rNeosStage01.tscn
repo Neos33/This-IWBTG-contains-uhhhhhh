@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://jb54q5yqegth"]
+[gd_scene load_steps=16 format=3 uid="uid://jb54q5yqegth"]
 
 [ext_resource type="Script" path="res://Rooms/rNeosStage01.gd" id="1_0xwcg"]
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_i2umm"]
@@ -12,9 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://de5ts46bva4ii" path="res://Audio/Sounds/sndBouncyBlock.wav" id="8_i0ie1"]
 [ext_resource type="PackedScene" uid="uid://2hs82bptqwfs" path="res://Objects/Neos/obj_player_audience.tscn" id="9_ms0ye"]
 [ext_resource type="PackedScene" uid="uid://b5sj3k4pn1mvu" path="res://Rooms/rPenaltyFake.tscn" id="9_t4cjx"]
-[ext_resource type="PackedScene" uid="uid://b31w5fm4w5857" path="res://Objects/Room_objects/objSavePoint.tscn" id="10_1c2v3"]
 [ext_resource type="PackedScene" uid="uid://bjvw2gfnahdw4" path="res://Objects/Neos/obj_lancia.tscn" id="11_khe5k"]
-[ext_resource type="PackedScene" uid="uid://bes18loo3v73l" path="res://Objects/Room_objects/objSaveBlocker.tscn" id="11_t56ku"]
 [ext_resource type="AudioStream" uid="uid://xqaw3ttrcuv5" path="res://Audio/Sounds/Neos/Brain fart.wav" id="12_8mf5v"]
 [ext_resource type="PackedScene" uid="uid://b40gwarhjqfte" path="res://Objects/Neos/objCarBarrierWeakness.tscn" id="15_d2wtg"]
 
@@ -127,15 +125,6 @@ position = Vector2(256, 184)
 
 [node name="objPlayerAudience16" parent="Room_related/Audience" instance=ExtResource("9_ms0ye")]
 position = Vector2(288, 184)
-
-[node name="objSavePoint" parent="Room_related" instance=ExtResource("10_1c2v3")]
-position = Vector2(400, 560)
-
-[node name="objSaveBlocker" parent="Room_related" instance=ExtResource("11_t56ku")]
-position = Vector2(448, 560)
-
-[node name="objSaveBlocker2" parent="Room_related" instance=ExtResource("11_t56ku")]
-position = Vector2(352, 560)
 
 [node name="Gimmicks" type="Node2D" parent="."]
 
