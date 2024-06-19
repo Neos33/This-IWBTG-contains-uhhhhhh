@@ -53,6 +53,9 @@ var dialog_events: Array = []
 ## Normally set by a warp object.
 var warp_to_point: Vector2 = Vector2.ZERO
 
+# Custom variables
+var S3_text_twice_if_we_skip: bool = false
+
 
 """
 Public readonly variables, meant to be accessed but not modified outside of this script
@@ -187,6 +190,8 @@ func full_game_restart() -> void:
 		# Clear/reset our global arrays
 		triggered_events.clear()
 		dialog_events.clear()
+		
+		S3_text_twice_if_we_skip = false
 		
 		# Clear itemsGameData. We don't save collectables when making a full
 		# game restart

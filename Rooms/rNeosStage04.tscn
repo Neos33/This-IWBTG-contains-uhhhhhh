@@ -1,11 +1,16 @@
-[gd_scene load_steps=5 format=3 uid="uid://gvjhuw8vrvhw"]
+[gd_scene load_steps=9 format=3 uid="uid://gvjhuw8vrvhw"]
 
 [ext_resource type="PackedScene" uid="uid://byy0nyaw6gtki" path="res://Objects/Room_objects/objMusicPlayer.tscn" id="1_2ollo"]
+[ext_resource type="Script" path="res://Rooms/rNeosStage04.gd" id="1_iryfx"]
 [ext_resource type="PackedScene" uid="uid://bm40t36a6m8sc" path="res://Objects/Tiles/til32x32.tscn" id="2_mctl3"]
-[ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="2_uriqs"]
 [ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="3_4aed0"]
+[ext_resource type="PackedScene" uid="uid://cdx3h81o7hqb4" path="res://Objects/Room_objects/objCameraDynamic.tscn" id="5_icey0"]
+[ext_resource type="Texture2D" uid="uid://cg5dhwu33tdg0" path="res://Graphics/Neos/sprHelicopter.png" id="5_uhuid"]
+[ext_resource type="Texture2D" uid="uid://burygy08cq204" path="res://Graphics/Sprites/Player/sprPlayerFall.png" id="6_0ftd6"]
+[ext_resource type="PackedScene" uid="uid://bqylv5tq4q10j" path="res://Objects/Gimmicks/objMovingBlock.tscn" id="6_skses"]
 
-[node name="rTemplate" type="Node2D"]
+[node name="rLevel4" type="Node2D"]
+script = ExtResource("1_iryfx")
 
 [node name="Environment" type="Node2D" parent="."]
 
@@ -18,10 +23,43 @@ layer_0/tile_data = PackedInt32Array(393216, 0, 3, 393217, 0, 2, 393218, 65536, 
 [node name="Room_related" type="Node2D" parent="."]
 
 [node name="objPlayer" parent="Room_related" instance=ExtResource("3_4aed0")]
+position = Vector2(248, 88)
+metadata/_edit_group_ = true
 
-[node name="objCameraFixed" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("2_uriqs")]
-position = Vector2(-16, 48)
+[node name="Pivot" type="Node2D" parent="Room_related/objPlayer"]
+
+[node name="Line2D" type="Line2D" parent="Room_related/objPlayer/Pivot"]
+points = PackedVector2Array(0, 608, 0, 40)
+width = 4.0
+default_color = Color(0, 0, 0, 1)
+
+[node name="Helicopter" type="Sprite2D" parent="Room_related/objPlayer/Pivot"]
+position = Vector2(-36, 0)
+texture = ExtResource("5_uhuid")
+
+[node name="PlayerOffset" type="Node2D" parent="Room_related/objPlayer/Pivot"]
+position = Vector2(0, 608)
+
+[node name="Sprite2D" type="Sprite2D" parent="Room_related/objPlayer/Pivot/PlayerOffset"]
+texture = ExtResource("6_0ftd6")
+flip_v = true
+hframes = 2
+
+[node name="Dummy" type="Node2D" parent="Room_related"]
+
+[node name="objCameraDynamic" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("5_icey0")]
+offset = Vector2(0, 608)
 target_node = NodePath("../objPlayer")
+stop_up_at = 0
+
+[node name="objMovingBlock" parent="Room_related" instance=ExtResource("6_skses")]
+position = Vector2(248, 176)
+scale = Vector2(7.32, 1)
+move_speed = Vector2(1, 0)
+
+[node name="objMovingBlock" parent="Room_related/objMovingBlock" instance=ExtResource("6_skses")]
+position = Vector2(-14.663, -86.2449)
+scale = Vector2(0.0983608, 4.4)
 
 [node name="Gimmicks" type="Node2D" parent="."]
 

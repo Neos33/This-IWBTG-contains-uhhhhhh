@@ -7,8 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://cjgn1pokbuu0p" path="res://Objects/Backgrounds/objBackgroundScrolling.tscn" id="5_5652x"]
 [ext_resource type="PackedScene" uid="uid://bp5rqk4l7tesk" path="res://Objects/Player/objPlayer.tscn" id="5_ws68y"]
 [ext_resource type="Texture2D" uid="uid://dlit77pi2a0te" path="res://Graphics/Backgrounds/bckPixelStarfield.png" id="6_4eqva"]
-[ext_resource type="PackedScene" uid="uid://cdx3h81o7hqb4" path="res://Objects/Room_objects/objCameraDynamic.tscn" id="6_h5c02"]
 [ext_resource type="PackedScene" uid="uid://b31w5fm4w5857" path="res://Objects/Room_objects/objSavePoint.tscn" id="7_cvscx"]
+[ext_resource type="PackedScene" uid="uid://yab7pya0yr1j" path="res://Objects/Room_objects/objCameraFixed.tscn" id="8_1y3jl"]
 [ext_resource type="PackedScene" uid="uid://bo3vrmvp7ayf8" path="res://Objects/Room_objects/objWarp.tscn" id="8_k8bft"]
 [ext_resource type="FontFile" uid="uid://4m283seugry" path="res://Graphics/Fonts/NFPixels-Regular.otf" id="9_3lttj"]
 [ext_resource type="PackedScene" uid="uid://035mv16jo7nf" path="res://Objects/Room_objects/objWarpNextStage.tscn" id="12_aau3k"]
@@ -40,13 +40,8 @@ background_index = ExtResource("6_4eqva")
 [node name="objPlayer" parent="Room_related" instance=ExtResource("5_ws68y")]
 position = Vector2(1156, 490)
 
-[node name="objCameraDynamic" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("6_h5c02")]
-position = Vector2(-16, 48)
+[node name="objCameraFixed" parent="Room_related" node_paths=PackedStringArray("target_node") instance=ExtResource("8_1y3jl")]
 target_node = NodePath("../objPlayer")
-stop_left_at = 0
-stop_up_at = 0
-stop_right_at = 800
-stop_down_at = 608
 
 [node name="objSavePoint" parent="Room_related" instance=ExtResource("7_cvscx")]
 position = Vector2(1156, 460)
