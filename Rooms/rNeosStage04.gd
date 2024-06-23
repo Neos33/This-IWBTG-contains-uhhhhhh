@@ -13,8 +13,8 @@ var distance: float = 10
 var offset_position: float = 152
 const oscillate: float = 50
 var cam_off: Vector2 = Vector2(0, -60)
-var amount1: float = 2
-var amount2: float = 4
+var amount1: float = 130
+#var amount2: float = 300
 
 
 # Called when the node enters the scene tree for the first time.
@@ -32,9 +32,9 @@ func _process(delta):
 	if is_instance_valid(GLOBAL_INSTANCES.objPlayerID):
 		angle += oscillate * delta
 		pivot.rotation_degrees = sin(deg_to_rad(angle)) * distance
-		var _add = amount1
-		if Input.is_action_pressed("button_jump"):
-			_add = amount2
+		var _add = amount1 * delta
+		#if Input.is_action_pressed("button_jump"):
+		#	_add = amount2 * delta
 		if Input.is_action_pressed("button_up"):
 			offset_position -= _add
 		if Input.is_action_pressed("button_down"):
