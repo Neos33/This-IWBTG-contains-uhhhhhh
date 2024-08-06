@@ -11,3 +11,4 @@ func _process(delta):
 	if Input.is_action_just_pressed("ui_select"):
 		get_tree().change_scene_to_file(main_menu)
 		GLOBAL_SOUNDS.play_sound(GLOBAL_SOUNDS.sndPause)
+

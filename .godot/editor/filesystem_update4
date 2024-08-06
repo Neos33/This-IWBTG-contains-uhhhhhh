@@ -1,3 +1,5 @@
+res://Scripts/UI/scrMenuCredits.gd
 res://Rooms/00_Title_and_menus/rMenuCredits.tscn
 res://Resources/Materials/matJumpParticle.tres
 res://Rooms/rNeosStage01.tscn
+res://Rooms/stage_number_loading.tscn

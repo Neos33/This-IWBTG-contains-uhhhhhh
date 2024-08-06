@@ -58,7 +58,7 @@ layout_mode = 2
 [node name="Info" type="Label" parent="Body/MarginContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 0
-text = "The game is quite short.  IWPO doesn't work here
+text = "The game is quite short. Yup that's the whole description
 
 Ideas taken from Alphamaxnova1, KuruHS, Sven-Coop maps,, Saturday legends
 
