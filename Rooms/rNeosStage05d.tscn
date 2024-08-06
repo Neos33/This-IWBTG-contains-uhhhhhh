@@ -17,18 +17,46 @@ position = Vector2(-16, 16)
 [node name="til32x32" parent="Environment" instance=ExtResource("2_4xoc0")]
 layer_0/tile_data = PackedInt32Array(1179672, 65536, 3, 1114136, 0, 0, 1048600, 65536, 3, 983064, 131072, 3, 917528, 131072, 0, 851992, 0, 0, 786456, 0, 3, 720920, 131072, 0, 655384, 0, 2, 589848, 131072, 1, 524312, 0, 2, 458776, 131072, 2, 393240, 196608, 3, 327704, 0, 1, 262168, 131072, 0, 196632, 65536, 3, 131096, 0, 0, 65560, 65536, 3, 24, 0, 2, 23, 196608, 3, 22, 65536, 0, 21, 196608, 0, 20, 65536, 0, 19, 131072, 3, 18, 196608, 1, 17, 0, 2, 16, 65536, 3, 15, 0, 2, 14, 65536, 2, 13, 0, 2, 12, 131072, 0, 65548, 0, 3, 65547, 0, 0, 65546, 65536, 1, 65545, 65536, 2, 65544, 131072, 1, 65543, 131072, 3, 65542, 196608, 0, 65541, 65536, 2, 65540, 0, 2, 65539, 65536, 2, 65538, 65536, 3, 2, 196608, 1, 1, 196608, 0, 0, 0, 2, 65536, 0, 3, 131072, 0, 0, 196608, 65536, 2, 262144, 65536, 3, 327680, 131072, 0, 393216, 0, 2, 458752, 0, 1, 524288, 65536, 1, 589824, 0, 0, 655360, 131072, 0, 720896, 196608, 3, 786432, 0, 0, 851968, 196608, 0, 917504, 65536, 3, 983040, 0, 0, 1048576, 0, 3, 1114112, 65536, 3, 1179648, 65536, 1, 1179649, 65536, 0, 1179650, 0, 1, 1179651, 196608, 0, 1179652, 65536, 1, 1179653, 196608, 3, 1179654, 196608, 1, 1179655, 196608, 1, 1179656, 131072, 3, 1179657, 65536, 3, 1179658, 0, 2, 1179659, 65536, 3, 1179660, 0, 3, 1179661, 131072, 2, 1179662, 0, 1, 1179663, 131072, 3, 1179664, 0, 2, 1179665, 65536, 0, 1179666, 131072, 2, 1179667, 196608, 0, 1179668, 65536, 3, 1179669, 0, 2, 1179670, 131072, 3, 1179671, 65536, 0)
 
-[node name="Label" type="Label" parent="Environment"]
-offset_left = 216.0
-offset_top = 128.0
-offset_right = 579.0
-offset_bottom = 183.0
+[node name="VBoxContainer" type="VBoxContainer" parent="Environment"]
+offset_left = 312.0
+offset_top = 144.0
+offset_right = 769.0
+offset_bottom = 422.0
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="Environment/VBoxContainer"]
+layout_mode = 2
 theme_override_font_sizes/font_size = 40
 text = "Thanks for playing!
-any%
-99.9%
-99.999999%
-100% Real EX what Clear GG!1"
+"
 horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="Environment/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "any%"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="Environment/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "99.9%"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="Environment/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "99.999999%"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="Environment/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "100% Real EX what Clear GG!1"
+horizontal_alignment = 1
+
+[node name="Label6" type="Label" parent="Environment/VBoxContainer"]
+layout_mode = 2
 
 [node name="Room_related" type="Node2D" parent="."]
 
